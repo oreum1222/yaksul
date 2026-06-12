@@ -1,0 +1,9 @@
+# 작업용 백업·시안 (배포 제외)
+_scratch/
+_original_reference/
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp

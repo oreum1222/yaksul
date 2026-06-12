@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2027학년도 홍익대학교(세종) 논술전형 정밀 분석 | [오름] 국어 학원</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard', sans-serif; }
+        body { background-color: #f8fafc; color: #2d3748; line-height: 1.7; padding: 40px 20px; }
+        .paper { max-width: 840px; margin: 0 auto; background: white; padding: 50px 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-top: 8px solid #6ee7a8; }
+        .header-block { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #6ee7a8; padding-bottom: 20px; margin-bottom: 35px; }
+        .logo-area img { max-width: 180px; }
+        .title-area { text-align: right; }
+        .title-area h1 { font-size: 28px; color: #6ee7a8; font-weight: 800; margin-bottom: 5px; }
+        .title-area p { font-size: 14px; color: #9aa8a0; font-weight: 600; }
+        .section-title { font-size: 20px; color: #6ee7a8; margin-top: 35px; margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .section-title::before { content: ''; display: inline-block; width: 4px; height: 18px; background-color: #00A8E8; border-radius: 2px; }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; table-layout: fixed; }
+        th, td { border: 1px solid #edf2f7; padding: 14px 16px; font-size: 15px; text-align: left; vertical-align: middle; }
+        th { background-color: #f8fafc; color: #6ee7a8; font-weight: 700; width: 25%; word-break: keep-all; }
+        td { color: #4a5568; word-break: keep-all; } .paper table tr:nth-child(even) td { background-color: #fbfcfd; }
+
+        .highlight { color: #e53e3e; font-weight: 700; }
+        .highlight-green { color: #38a169; font-weight: 700; }
+        .badge { display: inline-block; padding: 2px 6px; background: #eef2f6; color: #4a5568; border-radius: 4px; font-size: 13px; font-weight: 600; margin-right: 5px; }
+        .badge-nature { display: inline-block; padding: 2px 6px; background: #ebf8ff; color: #2b6cb0; border-radius: 4px; font-size: 13px; font-weight: 600; margin-right: 5px; border: 1px solid #bee3f8; }
+        .analysis-box { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 20px; margin-top: 10px; }
+        .analysis-box p { font-size: 15px; color: #4a5568; margin-bottom: 12px; text-align: justify; word-break: keep-all; }
+        .strategy-list { margin-left: 20px; font-size: 14px; color: #4a5568; }
+        .strategy-list li { margin-bottom: 6px; word-break: keep-all; }
+
+        @media (max-width: 600px) {
+            body { padding: 10px 8px; background-color: #f1f5f9; }
+            .paper { padding: 24px 16px; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+            .header-block { flex-direction: column; align-items: center; text-align: center; gap: 12px; padding-bottom: 16px; margin-bottom: 25px; }
+            .logo-area img { max-width: 140px; margin-bottom: 2px; }
+            .title-area { text-align: center; width: 100%; }
+            .title-area h1 { font-size: 22px; letter-spacing: -0.5px; word-break: keep-all; }
+            .title-area p { font-size: 12px; letter-spacing: -0.3px; }
+            .section-title { font-size: 16px; margin-top: 25px; margin-bottom: 10px; }
+            .section-title::before { height: 15px; width: 3.5px; }
+
+            table, tbody, tr, th, td { display: block; width: 100% !important; }
+            tr { margin-bottom: 12px; border: 1px solid #e2e8f0; border-radius: 6px; overflow: hidden; background: #ffffff; }
+            tr:last-child { margin-bottom: 0; }
+            th, td { border: none; padding: 10px 12px; font-size: 13.5px; line-height: 1.5; }
+            th { background-color: #f1f5f9; color: #6ee7a8; font-size: 13px; border-bottom: 1px dashed #e2e8f0; padding-top: 8px; padding-bottom: 8px; }
+            td { padding-top: 10px; padding-bottom: 10px; }
+            .badge, .badge-nature { font-size: 11.5px; padding: 1px 5px; margin-right: 3px; }
+            .analysis-box { padding: 16px 14px; margin-top: 8px; }
+            .analysis-box p { font-size: 13.5px; text-align: left; letter-spacing: -0.3px; line-height: 1.6; }
+            .strategy-list { margin-left: 16px; font-size: 13px; }
+            .strategy-list li { margin-bottom: 8px; line-height: 1.5; }
+        }
+    </style>
+
+    <style>
+    /* ===== [오름] 국어 학원 다크그린 테마 오버라이드 ===== */
+    :root{--bg:#0a0f0c;--surface:#0f1712;--surface2:#13211a;--line:#1d2a23;--line2:#2c4234;
+          --ink:#f1f6f3;--ink2:#a7b6ad;--muted:#8a988f;--green:#34d399;--mint:#6ee7a8;
+          --green-deep:#06281a;--soft:#13241b;--amber:#fbcf5b;}
+    body{background:var(--bg)!important;color:var(--ink2)!important;}
+    .paper{background:var(--surface)!important;border-top:6px solid var(--green)!important;
+           box-shadow:0 0 50px rgba(52,211,153,.07),0 18px 50px rgba(0,0,0,.4)!important;border:1px solid var(--line);}
+    .header-block{border-bottom:1px solid var(--line)!important;}
+    .logo-area{display:flex;align-items:center;gap:11px;}.logo-area img{width:50px;height:50px;filter:drop-shadow(0 0 14px rgba(52,211,153,.28));}.brandtxt{font-size:18px;font-weight:800;color:var(--ink);letter-spacing:-.3px;}.brandtxt i{font-style:normal;color:var(--mint);}
+    .title-area h1{color:var(--ink)!important;}
+    .title-area p{color:var(--muted)!important;}
+    .section-title{color:var(--ink)!important;}
+    .section-title::before{background:var(--green)!important;box-shadow:0 0 12px rgba(52,211,153,.6);}
+    table{border-color:var(--line)!important;}
+    th{background:var(--surface2)!important;color:var(--mint)!important;border-color:var(--line)!important;}
+    td{color:var(--ink2)!important;border-color:var(--line)!important;}
+    .paper table tr:nth-child(even) td{background:rgba(255,255,255,.02)!important;}
+    .highlight{color:var(--amber)!important;}
+    .highlight-green{color:var(--mint)!important;}
+    .badge{background:var(--soft)!important;color:var(--mint)!important;}
+    .badge-medical{background:rgba(251,191,36,.13)!important;color:var(--amber)!important;border:1px solid rgba(251,191,36,.32)!important;}
+    .analysis-box{background:var(--surface2)!important;border:1px solid var(--line)!important;}
+    .analysis-box p,.analysis-box div{color:var(--ink2)!important;}
+    .strategy-list,.strategy-list li{color:var(--ink2)!important;}
+    a[href*="index.html"]{color:var(--mint)!important;}
+    </style>
+</head>
+<body>
+    <div class="paper">
+        <a href="index.html#detail=hongik_sejong.html" style="display:inline-block;margin-bottom:18px;color:#6ee7a8;font-weight:700;font-size:14px;text-decoration:none;">← 마스터 허브로 돌아가기</a>
+        <div class="header-block">
+            <div class="logo-area"><img src="images/oreum-emblem.png" alt="[오름] 국어 학원"><span class="brandtxt">[<i>오름</i>] 국어 학원</span></div>
+            <div class="title-area">
+                <h1>홍익대학교(세종)</h1>
+                <p>2027학년도 수시 모집요강 상세 분석</p>
+            </div>
+        </div>
+
+        <div class="section-title">기본 전형 구조 및 모집안내</div>
+        <table>
+            <tr><th>전형 명칭</th><td style="font-weight: 700;">논술전형 (논술위주)</td></tr>
+            <tr><th>총 모집 인원</th><td><strong>195명</strong></td></tr>
+            <tr><th>요소별 반영비율</th><td><strong>논술 90% + 학생부교과 10%</strong> (일괄합산 적용)</td></tr>
+            <tr><th>학생부교과 산출<br>(최소 감점 방어)</th>
+                <td>국, 영, 수, 택1(사회/과학) 교과별 상위 3과목씩 <strong>총 12과목만 학년구분 없이 반영</strong><br>
+                <span class="highlight" style="font-size: 13.5px;">※ 교과 전 과목이 아닌 우수 12과목만 선별하여 석차등급을 반영하므로 내신 페널티가 현저히 낮음</span></td>
+            </tr>
+            <tr><th>수능 최저학력기준</th>
+                <td><span class="highlight">있음 (전국 최저 수준의 허들)</span><br>
+                인문/자연 전 모집단위: 국어, 수학, 영어, 탐구(사/과 상위 1과목) 중 <strong>1개 영역 등급 4 이내</strong></td>
+            </tr>
+        </table>
+
+        <div class="section-title">논술고사 세부 구성 지표</div>
+        <table>
+            <tr><th>고사 일정 및 시간</th><td><strong>2026. 11. 22. (일)</strong> / 제한시간 <strong>70분</strong> / 세종캠퍼스 실시</td></tr>
+            <tr><th>계열별 완전히 독립된<br>출제 범위 및 형태</th>
+                <td>
+                    <div style="margin-bottom: 12px;">
+                        <div class="badge">인문계열 및 자율전공(인문)</div><br>
+                        • <strong>출제 형태:</strong> 통합교과형 (제시문 약 15개, 제시문 당 하위 문항 2개 출제)<br>
+                        • <strong>출제 범위:</strong> 국어 교과 전 범위(화작, 언매 포함) + 사회 교과군 전 범위(통합사회, 한국지리, 생활과 윤리, 경제 등)<br>
+                        • <strong>문항 유형:</strong> 선택형, 단답형, 단문형 문항 혼합 출제
+                    </div>
+                    <div>
+                        <div class="badge-nature">자연계열 및 자율전공(자연)</div><br>
+                        • <strong>출제 형태:</strong> 교과서 등을 변형한 <strong>서술형 수학 7문항</strong> 출제<br>
+                        • <strong>출제 범위:</strong> <strong>수학 I, 수학 II</strong>
+                    </div>
+                    <span style="font-size: 12.5px; color: #9aa8a0; display: block; margin-top: 6px;">※ 계열 공통 사항: 문항별 지정된 답안란에 작성 (노트 형식의 답안지)</span>
+                </td>
+            </tr>
+            <tr><th>동점자 처리기준</th>
+                <td>1순위: 논술고사 성적 우수자 → 2순위: 학생부 교과 평균등급 우수자</td>
+            </tr>
+        </table>
+
+        <div class="section-title">[오름] 국어 학원 입시 분석 · 합격 전략</div>
+        <div class="analysis-box">
+            <p>홍익대학교(세종) 논술전형의 가장 큰 특징은 수능 최저학력기준이 <strong>'1개 영역 4등급 이내'</strong>에 머문다는 점입니다. 약술형 논술을 실시하는 대학들과 비교해도 통과 부담이 작은 편이어서, 영어 등급이나 자신 있는 탐구 한 과목만 안정적으로 확보하면 어렵지 않게 충족할 수 있습니다. 그만큼 합격선은 수능이 아니라 논술 90% 성적에서 갈린다고 보시면 됩니다. 수도권 소재 대학을 노리는 수험생에게는 답안 완성도로 승부를 거는 전형인 셈입니다.</p>
+            <div style="font-weight: 700; margin-top: 15px; margin-bottom: 8px; color: #6ee7a8; font-size: 13.5px;">💡 핵심 지도 방침:</div>
+            <ul class="strategy-list">
+                <li><strong>계열에 따라 시험지 자체가 다릅니다.</strong> 국어와 수학을 한 시험지에서 함께 묻는 다른 대학들과 달리, 홍대 세종은 인문계열과 자연계열의 출제 형태가 서로 무관하게 진행됩니다. 인문은 국어와 사회를 묶은 통합교과형, 자연은 수학 I·II만 다루는 수리 서술형입니다. 지원할 계열이 정해졌다면 그 한 가지 형태에만 시간을 몰아 준비하는 편이 효율적입니다.</li>
+                <li><strong>자연계열은 70분에 7문항입니다.</strong> 수학 I·II 범위에서 서술형으로 7문항이 나오므로 한 문항에 쓸 수 있는 시간은 평균 10분 안팎입니다. 다만 교과서를 변형한 문항이라 결과만 적는 것으로는 부족하고, 풀이에 동원한 개념과 원리를 수식으로 빠짐없이 적어 내려가는 연습이 필요합니다. 평소 손으로 서술해 보는 훈련을 권합니다.</li>
+                <li><strong>인문계열은 읽어 낼 분량이 많습니다.</strong> 국어에 더해 한국지리, 경제, 사회문화 등 사회 교과군이 결합된 제시문 15개가 주어지고, 그 아래 단답·단문형 하위 문항을 70분 안에 처리해야 합니다. 미리 쌓아 둔 배경지식보다는 제시문에서 핵심을 빠르게 집어내는 독해력이 점수를 좌우하므로, 긴 지문을 정해진 시간 안에 읽고 정리하는 연습을 반복해 두시기 바랍니다.</li>
+            </ul>
+        </div>
+    </div>
+<div style="max-width:840px;margin:22px auto 0;text-align:center;"><a href="index.html#detail=hongik_sejong.html" style="display:inline-block;color:#6ee7a8;font-weight:700;font-size:14px;text-decoration:none;">← 마스터 허브로 돌아가기</a><p style="font-size:12px;color:#76867c;margin-top:10px;line-height:1.6;">※ 2027학년도 모집요강 기준 · 지원 전 각 대학 공식 모집요강 원문을 확인하시기 바랍니다.</p></div>
+</body>
+</html>

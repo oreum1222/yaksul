@@ -1,0 +1,7 @@
+_original_reference/
+_scratch/
+docs/
+_build/
+.git/
+.gitignore
+*.md

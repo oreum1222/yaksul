@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2027학년도 신한대학교 논술전형 정밀 분석 | [오름] 국어 학원</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard', sans-serif; }
+        body { background-color: #f8fafc; color: #2d3748; line-height: 1.7; padding: 40px 20px; }
+        .paper { max-width: 840px; margin: 0 auto; background: white; padding: 50px 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-top: 8px solid #6ee7a8; }
+        .header-block { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #6ee7a8; padding-bottom: 20px; margin-bottom: 35px; }
+        .logo-area img { max-width: 180px; }
+        .title-area { text-align: right; }
+        .title-area h1 { font-size: 28px; color: #6ee7a8; font-weight: 800; margin-bottom: 5px; }
+        .title-area p { font-size: 14px; color: #9aa8a0; font-weight: 600; }
+        .section-title { font-size: 20px; color: #6ee7a8; margin-top: 35px; margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .section-title::before { content: ''; display: inline-block; width: 4px; height: 18px; background-color: #00A8E8; border-radius: 2px; }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; table-layout: fixed; }
+        th, td { border: 1px solid #edf2f7; padding: 14px 16px; font-size: 15px; text-align: left; vertical-align: middle; }
+        th { background-color: #f8fafc; color: #6ee7a8; font-weight: 700; width: 25%; word-break: keep-all; }
+        td { color: #4a5568; word-break: keep-all; } .paper table tr:nth-child(even) td { background-color: #fbfcfd; }
+
+        .highlight { color: #e53e3e; font-weight: 700; }
+        .highlight-green { color: #38a169; font-weight: 700; }
+        .badge { display: inline-block; padding: 2px 6px; background: #eef2f6; color: #4a5568; border-radius: 4px; font-size: 13px; font-weight: 600; margin-right: 5px; }
+        .badge-integrated { display: inline-block; padding: 2px 6px; background: #ebf8ff; color: #2b6cb0; border-radius: 4px; font-size: 13px; font-weight: 600; margin-right: 5px; border: 1px solid #bee3f8; }
+        .analysis-box { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 20px; margin-top: 10px; }
+        .analysis-box p { font-size: 15px; color: #4a5568; margin-bottom: 12px; text-align: justify; word-break: keep-all; }
+        .strategy-list { margin-left: 20px; font-size: 14px; color: #4a5568; }
+        .strategy-list li { margin-bottom: 6px; word-break: keep-all; }
+
+        @media (max-width: 600px) {
+            body { padding: 10px 8px; background-color: #f1f5f9; }
+            .paper { padding: 24px 16px; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+            .header-block { flex-direction: column; align-items: center; text-align: center; gap: 12px; padding-bottom: 16px; margin-bottom: 25px; }
+            .logo-area img { max-width: 140px; margin-bottom: 2px; }
+            .title-area { text-align: center; width: 100%; }
+            .title-area h1 { font-size: 22px; letter-spacing: -0.5px; word-break: keep-all; }
+            .title-area p { font-size: 12px; letter-spacing: -0.3px; }
+            .section-title { font-size: 16px; margin-top: 25px; margin-bottom: 10px; }
+            .section-title::before { height: 15px; width: 3.5px; }
+
+            table, tbody, tr, th, td { display: block; width: 100% !important; }
+            tr { margin-bottom: 12px; border: 1px solid #e2e8f0; border-radius: 6px; overflow: hidden; background: #ffffff; }
+            tr:last-child { margin-bottom: 0; }
+            th, td { border: none; padding: 10px 12px; font-size: 13.5px; line-height: 1.5; }
+            th { background-color: #f1f5f9; color: #6ee7a8; font-size: 13px; border-bottom: 1px dashed #e2e8f0; padding-top: 8px; padding-bottom: 8px; }
+            td { padding-top: 10px; padding-bottom: 10px; }
+            .badge, .badge-integrated { font-size: 11.5px; padding: 1px 5px; margin-right: 3px; }
+            .analysis-box { padding: 16px 14px; margin-top: 8px; }
+            .analysis-box p { font-size: 13.5px; text-align: left; letter-spacing: -0.3px; line-height: 1.6; }
+            .strategy-list { margin-left: 16px; font-size: 13px; }
+            .strategy-list li { margin-bottom: 8px; line-height: 1.5; }
+        }
+    </style>
+
+    <style>
+    /* ===== [오름] 국어 학원 다크그린 테마 오버라이드 ===== */
+    :root{--bg:#0a0f0c;--surface:#0f1712;--surface2:#13211a;--line:#1d2a23;--line2:#2c4234;
+          --ink:#f1f6f3;--ink2:#a7b6ad;--muted:#8a988f;--green:#34d399;--mint:#6ee7a8;
+          --green-deep:#06281a;--soft:#13241b;--amber:#fbcf5b;}
+    body{background:var(--bg)!important;color:var(--ink2)!important;}
+    .paper{background:var(--surface)!important;border-top:6px solid var(--green)!important;
+           box-shadow:0 0 50px rgba(52,211,153,.07),0 18px 50px rgba(0,0,0,.4)!important;border:1px solid var(--line);}
+    .header-block{border-bottom:1px solid var(--line)!important;}
+    .logo-area{display:flex;align-items:center;gap:11px;}.logo-area img{width:50px;height:50px;filter:drop-shadow(0 0 14px rgba(52,211,153,.28));}.brandtxt{font-size:18px;font-weight:800;color:var(--ink);letter-spacing:-.3px;}.brandtxt i{font-style:normal;color:var(--mint);}
+    .title-area h1{color:var(--ink)!important;}
+    .title-area p{color:var(--muted)!important;}
+    .section-title{color:var(--ink)!important;}
+    .section-title::before{background:var(--green)!important;box-shadow:0 0 12px rgba(52,211,153,.6);}
+    table{border-color:var(--line)!important;}
+    th{background:var(--surface2)!important;color:var(--mint)!important;border-color:var(--line)!important;}
+    td{color:var(--ink2)!important;border-color:var(--line)!important;}
+    .paper table tr:nth-child(even) td{background:rgba(255,255,255,.02)!important;}
+    .highlight{color:var(--amber)!important;}
+    .highlight-green{color:var(--mint)!important;}
+    .badge{background:var(--soft)!important;color:var(--mint)!important;}
+    .badge-medical{background:rgba(251,191,36,.13)!important;color:var(--amber)!important;border:1px solid rgba(251,191,36,.32)!important;}
+    .analysis-box{background:var(--surface2)!important;border:1px solid var(--line)!important;}
+    .analysis-box p,.analysis-box div{color:var(--ink2)!important;}
+    .strategy-list,.strategy-list li{color:var(--ink2)!important;}
+    a[href*="index.html"]{color:var(--mint)!important;}
+    </style>
+</head>
+<body>
+    <div class="paper">
+        <a href="index.html#detail=shinhan.html" style="display:inline-block;margin-bottom:18px;color:#6ee7a8;font-weight:700;font-size:14px;text-decoration:none;">← 마스터 허브로 돌아가기</a>
+        <div class="header-block">
+            <div class="logo-area"><img src="images/oreum-emblem.png" alt="[오름] 국어 학원"><span class="brandtxt">[<i>오름</i>] 국어 학원</span></div>
+            <div class="title-area">
+                <h1>신한대학교</h1>
+                <p>2027학년도 수시 모집요강 상세 분석</p>
+            </div>
+        </div>
+
+        <div class="section-title">기본 전형 구조 및 모집안내</div>
+        <table>
+            <tr><th>전형 명칭</th><td style="font-weight: 700;">논술전형(논술)</td></tr>
+            <tr><th>총 모집 인원</th><td><strong>186명</strong> <span style="font-size: 13px; color: #9aa8a0;"><br>(공학 50명, AI융합 10명, 자연과학 51명, 인문사회 75명)</span></td></tr>
+            <tr><th>요소별 반영비율</th><td><strong>논술 90% (900점) + 학생부교과 10% (100점)</strong> (총점 1,000점 일괄합산)</td></tr>
+            <tr><th>학생부교과 산출<br>(최소 감점 방어)</th>
+                <td>국, 영, 수, 사, 과, 한국사 반영교과 중 <strong>우수 10개 과목 반영</strong><br>
+                <span class="highlight" style="font-size: 13.5px;">※ 진로선택과목 최대 2과목 반영 가능하며, 전 과목이 아닌 우수 10과목만 선별하므로 내신 부담이 매우 적음</span></td>
+            </tr>
+            <tr><th>수능 최저학력기준</th><td><span class="highlight-green">없음 (미적용)</span></td></tr>
+        </table>
+
+        <div class="section-title">논술고사 세부 구성 지표</div>
+        <table>
+            <tr><th>고사 일정 및 시간</th><td><strong>2026. 11. 29. (일)</strong> / 고사시간 <strong>80분</strong></td></tr>
+            <tr><th>계열구분 없는<br>공통 문항 출제</th>
+                <td>
+                    <div class="badge-integrated" style="margin-bottom: 6px;">전 계열 공통</div>
+                    <strong>국어 7문항 + 수학 7문항 = 총 14문항 출제</strong><br>
+                    <span style="font-size: 12.5px; color: #9aa8a0; display: block; margin-top: 4px;">※ 계열에 상관없이 동일한 문항 수(1:1 비율)로 평가</span>
+                </td>
+            </tr>
+            <tr><th>출제 범위 및 배점</th>
+                <td>
+                    • <div class="badge">국어</div> 문학, 독서 (제시문 핵심 이해 및 조건 충실 서술)<br>
+                    • <div class="badge">수학</div> 수학 I, 수학 II (개념/원리 활용 및 정확한 기호 사용)<br>
+                    <span style="font-size: 12.5px; color: #9aa8a0; display: block; margin-top: 4px;">※ 문항당 10~15점 배점 (국어/수학 각 7문항) + 750점 기본점수 = 900점 만점</span>
+                </td>
+            </tr>
+            <tr><th>동점자 처리기준</th>
+                <td>
+                    • <strong>인문사회계열:</strong> 1순위 논술성적 → 2순위 논술 <strong>국어</strong>영역 성적 높은 자<br>
+                    • <strong>공학/자연과학계열:</strong> 1순위 논술성적 → 2순위 논술 <strong>수학</strong>영역 성적 높은 자
+                </td>
+            </tr>
+        </table>
+
+        <div class="section-title">[오름] 국어 학원 입시 분석 · 합격 전략</div>
+        <div class="analysis-box">
+            <p>신한대 논술전형의 핵심은 총점 1,000점 가운데 900점, 즉 90%가 논술고사에서 결정된다는 점입니다. 학생부교과가 10% 반영되지만, 지원자의 모든 과목을 보는 것이 아니라 성적이 좋은 순서로 우수 10개 과목만 골라 산출합니다. 그래서 내신이 다소 부족한 학생도 감점을 최소한으로 방어한 채 논술 준비에 집중할 수 있는 구조입니다.</p>
+            <div style="font-weight: 700; margin-top: 15px; margin-bottom: 8px; color: #6ee7a8; font-size: 13.5px;">확정요강 기준 [오름] 국어 학원 지도 포인트</div>
+            <ul class="strategy-list">
+                <li><strong>계열과 무관한 국어·수학 1:1 구성:</strong> 인문사회로 지원하든 공학·자연과학으로 지원하든 시험지는 동일합니다. 국어 7문항, 수학 7문항, 합쳐서 14문항을 모두 풀어야 하므로 한쪽 과목만 준비해서는 점수를 채우기 어렵습니다. 두 과목을 고르게 끌어올리는 학습 설계가 먼저입니다.</li>
+                <li><strong>동점자 기준을 역산한 과목 배분:</strong> 총점이 같으면 인문사회계열은 국어, 공학·자연과학계열은 수학 성적이 높은 쪽이 앞섭니다. 14문항을 전부 챙기되, 본인 계열의 주력 과목에서는 기호 표기와 서술 과정의 빈틈을 한 번 더 점검해 사소한 감점을 줄이는 것이 합격선에서 갈립니다.</li>
+                <li><strong>80분·14문항의 시간 운용:</strong> 80분 안에 14문항을 서술형으로 마무리해야 하므로 한 문항에 쓸 수 있는 시간은 평균 5분 안팎입니다. [오름] 국어 학원에서는 EBS 연계 제시문을 반복해서 다루며, 문제를 읽은 직후 답안 골격을 잡고 풀이를 전개하는 연습으로 시간 압박을 줄여 나갑니다.</li>
+            </ul>
+        </div>
+    </div>
+<div style="max-width:840px;margin:22px auto 0;text-align:center;"><a href="index.html#detail=shinhan.html" style="display:inline-block;color:#6ee7a8;font-weight:700;font-size:14px;text-decoration:none;">← 마스터 허브로 돌아가기</a><p style="font-size:12px;color:#76867c;margin-top:10px;line-height:1.6;">※ 2027학년도 모집요강 기준 · 지원 전 각 대학 공식 모집요강 원문을 확인하시기 바랍니다.</p></div>
+</body>
+</html>

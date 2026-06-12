@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2027학년도 대입 약술형 논술 합격 마스터 허브 | [오름] 국어 학원</title>
+    <meta name="description" content="2027학년도 전국 15개 약술형 논술 실시 대학의 전형 핵심 지표·합격 로드맵 통합 허브. [오름] 국어 학원 약술형 논술 교재 라인업.">
+    <link rel="icon" href="favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yaksul-master-hub.vercel.app/">
+    <meta property="og:title" content="2027 약술형 논술 합격 마스터 허브 | [오름] 국어 학원">
+    <meta property="og:description" content="전국 15개 약술형 논술 대학 전형 핵심 지표 + [오름] 국어 학원 약술 교재 라인업">
+    <meta property="og:image" content="https://yaksul-master-hub.vercel.app/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://yaksul-master-hub.vercel.app/images/og-image.png">
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+        :root{
+            --bg:#0a0f0c; --surface:#0f1712; --surface2:#13211a; --line:#1d2a23; --line2:#2c4234;
+            --ink:#f1f6f3; --ink2:#a7b6ad; --muted:#76867c;
+            --green:#34d399; --mint:#6ee7a8; --green-deep:#06281a; --soft:#13241b; --amber:#fbcf5b;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Pretendard',sans-serif; word-break:keep-all; overflow-wrap:break-word; }
+        body { background:var(--bg); color:var(--ink2); line-height:1.6; padding-bottom:0; }
+        ::selection { background:rgba(52,211,153,.3); color:#fff; }
+
+        /* ===== HERO ===== */
+        .hero { background:#0b120e; color:#fff; padding:48px 40px 44px; position:relative; overflow:hidden; border-bottom:1px solid var(--line); }
+        .hero::before { content:''; position:absolute; right:-140px; top:-180px; width:560px; height:560px; border-radius:50%; background:radial-gradient(circle, rgba(52,211,153,.55), transparent 68%); filter:blur(6px); }
+        .hero::after { content:''; position:absolute; right:120px; bottom:-240px; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle, rgba(110,231,168,.42), transparent 70%); filter:blur(8px); }
+        .hero-inner { max-width:1180px; margin:0 auto; position:relative; z-index:1; }
+        .hero .glow-left { position:absolute; left:-220px; top:20px; width:460px; height:460px; border-radius:50%; background:radial-gradient(circle, rgba(16,185,129,.32), transparent 70%); z-index:0; pointer-events:none; }
+        .brand { display:inline-flex; align-items:center; gap:13px; margin-bottom:22px; text-decoration:none; }
+        .brand img { width:58px; height:58px; filter:drop-shadow(0 0 18px rgba(52,211,153,.28)); }
+        .brand .bt { display:flex; flex-direction:column; line-height:1.15; }
+        .brand .bt b { font-size:22px; font-weight:800; color:#f3f8f5; letter-spacing:-.4px; }
+        .brand .bt b i { font-style:normal; color:var(--mint); }
+        .brand .bt em { font-size:11.5px; font-style:normal; color:#8a9b91; font-weight:600; margin-top:4px; letter-spacing:-.2px; }
+        .hero .badge { display:inline-block; font-size:12.5px; font-weight:800; color:var(--mint); background:rgba(52,211,153,.13); border:1px solid rgba(52,211,153,.34); padding:6px 14px; border-radius:999px; margin-bottom:18px; box-shadow:0 0 24px rgba(52,211,153,.25); margin-left:0; }
+        .hero h1 { font-size:36px; line-height:1.32; font-weight:800; letter-spacing:-.7px; margin-bottom:14px; color:#f3f8f5; }
+        .hero h1 .hl { background:linear-gradient(120deg,#6ee7a8,#34d399); -webkit-background-clip:text; background-clip:text; color:transparent; filter:drop-shadow(0 0 18px rgba(52,211,153,.45)); }
+        .hero p { font-size:15px; line-height:1.75; color:#9fb0a6; max-width:640px; }
+        .hero .stats { display:flex; gap:14px; margin-top:28px; flex-wrap:wrap; }
+        .hero .stats .s { background:rgba(255,255,255,.045); border:1px solid rgba(110,231,168,.16); border-radius:15px; padding:13px 22px; box-shadow:inset 0 0 22px rgba(52,211,153,.06); }
+        .hero .stats .s b { display:block; font-size:25px; font-weight:800; background:linear-gradient(120deg,#6ee7a8,#34d399); -webkit-background-clip:text; background-clip:text; color:transparent; }
+        .hero .stats .s span { font-size:12px; color:#7e8e85; font-weight:600; }
+        .hero-inner { display:flex; gap:36px; align-items:center; justify-content:space-between; }
+        .hero-left { flex:1 1 auto; min-width:0; max-width:660px; }
+
+        /* 히어로 상시 적중 스포트라이트 (가경T) */
+        .hero-spot { flex:0 0 318px; }
+        .hit-spot { background:rgba(11,18,14,.55); backdrop-filter:blur(9px); border:1px solid var(--line2); border-radius:22px; overflow:hidden; box-shadow:0 0 54px rgba(52,211,153,.3), 0 20px 50px rgba(0,0,0,.45); }
+        .hit-spot .kgk-wrap { position:relative; display:flex; justify-content:center; align-items:flex-end; padding-top:16px; background:radial-gradient(120% 80% at 50% 0%, rgba(52,211,153,.18), transparent 72%); }
+        .hit-spot .kgk-wrap img { height:300px; width:auto; max-width:100%; object-fit:contain; display:block; filter:drop-shadow(0 8px 22px rgba(0,0,0,.5)); -webkit-mask-image:linear-gradient(to bottom, #000 74%, transparent 99%); mask-image:linear-gradient(to bottom, #000 74%, transparent 99%); }
+        .hit-spot-txt { padding:0 22px 22px; text-align:center; margin-top:-14px; }
+        .spot-badge { display:inline-block; font-size:11.5px; font-weight:800; color:var(--mint); background:rgba(52,211,153,.13); border:1px solid rgba(52,211,153,.34); padding:5px 12px; border-radius:999px; margin-bottom:12px; box-shadow:0 0 18px rgba(52,211,153,.3); }
+        .hit-spot-txt h3 { font-size:21px; font-weight:800; color:#f1f6f3; letter-spacing:-.4px; margin-bottom:9px; }
+        .hit-spot-txt h3 b { font-size:30px; background:linear-gradient(120deg,#6ee7a8,#34d399); -webkit-background-clip:text; background-clip:text; color:transparent; filter:drop-shadow(0 0 16px rgba(52,211,153,.55)); }
+        .hit-spot-txt p { font-size:12.5px; line-height:1.65; color:#9fb0a6; margin-bottom:16px; }
+        .hit-spot-txt p strong { color:var(--mint); }
+        .spot-btn { width:100%; padding:12px; font-size:13.5px; font-weight:800; color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); border:none; border-radius:11px; cursor:pointer; box-shadow:0 0 26px rgba(52,211,153,.5); transition:.2s; animation:spotPulse 2.4s ease-in-out infinite; }
+        .spot-btn:hover { transform:translateY(-2px); box-shadow:0 0 40px rgba(52,211,153,.85); }
+        @keyframes spotPulse { 0%,100%{ box-shadow:0 0 22px rgba(52,211,153,.4);} 50%{ box-shadow:0 0 40px rgba(52,211,153,.85);} }
+
+        .container { max-width:1180px; margin:0 auto; padding:30px 40px 60px; }
+
+        /* ===== LOBBY TABS ===== */
+        .lobby-tabs { display:flex; gap:8px; margin-bottom:36px; background:var(--surface); padding:8px; border-radius:16px; border:1px solid var(--line); }
+        .lobby-btn { flex:1; background:none; border:none; padding:14px 12px; border-radius:11px; font-size:14.5px; font-weight:800; color:var(--ink2); cursor:pointer; transition:.18s; text-align:center; line-height:1.35; }
+        .lobby-btn:hover { color:var(--mint); background:rgba(52,211,153,.06); }
+        .lobby-btn.active { color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); box-shadow:0 0 40px rgba(52,211,153,.75); }
+
+        .lobby-panel { display:none; }
+        .lobby-panel.active { display:block; animation:fadeIn .4s ease; }
+        @keyframes fadeIn { from{ opacity:0; transform:translateY(6px);} to{ opacity:1; transform:translateY(0);} }
+
+        /* ===== GUIDE TOGGLE + CARDS ===== */
+        .toggle-wrapper { margin-bottom:34px; }
+        .btn-toggle { width:100%; padding:16px 20px; background:var(--surface); border:1px solid var(--line); color:var(--mint); font-size:15px; font-weight:800; border-radius:13px; cursor:pointer; display:flex; justify-content:center; align-items:center; gap:8px; transition:.18s; }
+        .btn-toggle:hover { border-color:var(--line2); background:var(--surface2); }
+        .toggle-content { display:none; margin-top:16px; }
+
+        .sec-h { font-size:20px; font-weight:800; color:var(--ink); margin-bottom:20px; display:flex; align-items:center; gap:11px; }
+        .sec-h::before { content:''; width:20px; height:20px; border-radius:6px; background:linear-gradient(120deg,#6ee7a8,#34d399); box-shadow:0 0 16px rgba(52,211,153,.6); }
+        .sec-h .sub { font-size:12.5px; color:var(--muted); font-weight:600; margin-left:2px; }
+
+        .grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:46px; }
+        .card-tip { background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:24px 20px; transition:.2s; }
+        .card-tip:hover { transform:translateY(-4px); border-color:var(--line2); background:var(--surface2); box-shadow:0 12px 30px rgba(0,0,0,.35), 0 0 24px rgba(52,211,153,.08); }
+        .card-tip .ic { width:42px; height:42px; border-radius:13px; background:var(--soft); color:var(--mint); border:1px solid rgba(52,211,153,.22); display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:900; margin-bottom:15px; box-shadow:0 0 18px rgba(52,211,153,.14); }
+        .card-tip h3 { font-size:15.5px; color:var(--ink); margin-bottom:9px; font-weight:800; }
+        .card-tip p { font-size:13px; color:var(--ink2); line-height:1.62; }
+
+        /* ===== UNIVERSITY CARD GRID ===== */
+        .uni-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        .uni-card { background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:22px 22px 18px; position:relative; overflow:hidden; transition:.22s; display:flex; flex-direction:column; cursor:pointer; box-shadow:0 0 22px rgba(52,211,153,.05); }
+        .uni-card::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background:linear-gradient(180deg,#6ee7a8,#34d399); box-shadow:0 0 22px rgba(52,211,153,.95); }
+        .uni-card:hover { transform:translateY(-5px); border-color:var(--green); background:var(--surface2); box-shadow:0 18px 40px rgba(0,0,0,.45), 0 0 48px rgba(52,211,153,.28); }
+        .uni-card:hover::before { box-shadow:0 0 30px rgba(52,211,153,1); }
+        .uc-top { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:16px; }
+        .uc-top .u { font-size:17px; font-weight:800; color:var(--ink); letter-spacing:-.3px; line-height:1.35; }
+        .uc-rows { display:flex; flex-direction:column; gap:11px; margin-bottom:16px; }
+        .uc-rows .r { display:flex; align-items:baseline; justify-content:space-between; gap:12px; }
+        .uc-rows .r > span { font-size:12.5px; color:var(--muted); font-weight:600; flex-shrink:0; }
+        .uc-rows .r > b { font-size:14px; color:var(--ink); font-weight:700; text-align:right; }
+        .uc-rows .r > b.dt { color:var(--mint); font-weight:800; }
+        .uc-rows .r.wide { flex-direction:column; align-items:flex-start; gap:4px; }
+        .uc-rows .r.wide > b { text-align:left; font-size:13px; font-weight:600; color:var(--ink2); line-height:1.5; }
+        .uc-foot { margin-top:auto; padding-top:14px; border-top:1px solid var(--line); display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
+        .btn-dl { display:inline-flex; align-items:center; gap:4px; padding:6px 11px; background:rgba(52,211,153,.08); color:var(--mint); border:1px solid rgba(52,211,153,.24); border-radius:8px; font-size:12px; font-weight:700; text-decoration:none; cursor:pointer; transition:.15s; }
+        .btn-dl:hover { background:rgba(52,211,153,.16); border-color:var(--green); }
+        .btn-dl.disabled { background:rgba(255,255,255,.03); color:var(--muted); border-color:var(--line); cursor:not-allowed; pointer-events:none; }
+        .uc-detail { margin-left:auto; font-size:12.5px; font-weight:800; color:var(--ink); text-decoration:none; padding:6px 12px; border-radius:8px; border:1px solid var(--line2); transition:.15s; }
+        .uc-detail:hover { background:linear-gradient(120deg,#6ee7a8,#34d399); color:var(--green-deep); border-color:transparent; box-shadow:0 0 18px rgba(52,211,153,.4); }
+
+        .tag { font-size:12px; font-weight:800; padding:4px 11px; border-radius:999px; white-space:nowrap; }
+        .tag.no { background:rgba(52,211,153,.15); color:var(--mint); }
+        .tag.yes { background:rgba(251,191,36,.13); color:var(--amber); }
+
+        .note { font-size:12.5px; color:var(--muted); margin-top:18px; text-align:right; line-height:1.6; }
+
+        /* ===== TAB 2: 대학 선택 칩 + 전형 리포트 ===== */
+        .uni-picker { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+        .uni-pill { padding:9px 16px; border:1px solid var(--line2); border-radius:999px; background:var(--surface); color:var(--ink2); font-size:13.5px; font-weight:700; cursor:pointer; transition:.15s; white-space:nowrap; }
+        .uni-pill:hover { border-color:var(--green); color:var(--mint); background:var(--surface2); }
+        .uni-pill.active { background:linear-gradient(120deg,#6ee7a8,#34d399); color:var(--green-deep); border-color:transparent; box-shadow:0 0 24px rgba(52,211,153,.5); }
+
+        .detail-display { background:var(--surface); padding:30px 30px 34px; border-radius:20px; border:1px solid var(--line); position:relative; overflow:hidden; }
+        .detail-display::before { content:''; position:absolute; right:-120px; top:-150px; width:360px; height:360px; border-radius:50%; background:radial-gradient(circle,rgba(52,211,153,.12),transparent 70%); pointer-events:none; }
+        .univ-detail-card { display:none; position:relative; z-index:1; }
+        .univ-detail-card.active { display:block; animation:fadeIn .35s ease; }
+
+        .dt-head { display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; margin-bottom:24px; padding-bottom:18px; border-bottom:1px solid var(--line); }
+        .dt-head .t { display:flex; flex-direction:column; gap:5px; }
+        .dt-kicker { font-size:11.5px; font-weight:800; color:var(--mint); letter-spacing:1.2px; }
+        .dt-head h2 { font-size:26px; color:var(--ink); font-weight:800; letter-spacing:-.6px; }
+        .dt-cta { font-size:13px; font-weight:800; color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); padding:10px 16px; border-radius:10px; text-decoration:none; box-shadow:0 0 22px rgba(52,211,153,.35); transition:.2s; white-space:nowrap; align-self:center; }
+        .dt-cta:hover { transform:translateY(-1px); box-shadow:0 0 32px rgba(52,211,153,.6); }
+
+        /* 핵심 지표 — 분절형 스탯 바 */
+        .dt-metrics { display:flex; flex-wrap:wrap; background:var(--surface2); border:1px solid var(--line); border-radius:16px; overflow:hidden; margin-bottom:24px; }
+        .dt-metrics .m { flex:1 1 150px; padding:16px 20px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+        .dt-metrics .m span { display:block; font-size:11px; color:var(--muted); font-weight:700; letter-spacing:.5px; margin-bottom:7px; }
+        .dt-metrics .m b { font-size:16px; color:var(--ink); font-weight:800; line-height:1.35; }
+        .dt-metrics .m b.ok { color:var(--mint); }
+        .dt-metrics .m b.warn { color:var(--amber); }
+        .dt-metrics .m b.dt { color:var(--mint); font-size:14.5px; }
+
+        /* 전형 상세 — 2열 카드(매스너리) */
+        .dt-spec { margin-bottom:24px; }
+        .dt-spec table, .dt-spec tbody { display:block; }
+        .dt-spec table { column-count:2; column-gap:14px; }
+        .dt-spec tr { display:inline-block; width:100%; break-inside:avoid; -webkit-column-break-inside:avoid; background:var(--surface2); border:1px solid var(--line); border-left:3px solid var(--green); border-radius:13px; padding:15px 17px; margin:0 0 14px; vertical-align:top; }
+        .dt-spec th { display:block; width:auto; text-align:left; padding:0 0 9px; font-size:11.5px; font-weight:800; color:var(--mint); letter-spacing:.4px; line-height:1.45; }
+        .dt-spec td { display:block; padding:0; font-size:13.5px; color:var(--ink2); line-height:1.68; }
+        .dt-spec td strong { color:var(--ink); font-weight:800; }
+        .dt-spec td span { color:var(--muted); }
+        .badge-none { background:rgba(52,211,153,.15)!important; color:var(--mint)!important; padding:2px 9px; border-radius:6px; font-size:12.5px; font-weight:800; }
+        .badge-yes { background:rgba(251,191,36,.13)!important; color:var(--amber)!important; padding:2px 9px; border-radius:6px; font-size:12.5px; font-weight:800; }
+
+        .dt-insight { background:rgba(52,211,153,.05); border:1px solid var(--line); border-left:3px solid var(--green); border-radius:14px; padding:20px 22px; }
+        .dt-insight .lbl { display:inline-block; font-size:12px; font-weight:800; color:var(--mint); margin-bottom:11px; letter-spacing:.3px; }
+        .dt-insight p { font-size:14px; color:var(--ink2); line-height:1.78; }
+        .dt-note { font-size:12px; color:var(--muted); margin-top:14px; }
+
+        .mobile-selector-wrap { display:none; margin-bottom:22px; }
+        .mobile-select { width:100%; padding:15px 18px; border:1px solid var(--line2); border-radius:12px; font-size:15.5px; font-weight:800; color:var(--ink); background:var(--surface); -webkit-appearance:none; -moz-appearance:none; appearance:none;
+            background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2334d399' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat:no-repeat; background-position:right 16px center; background-size:16px; padding-right:44px; outline:none; cursor:pointer; }
+        .mobile-select option { background:var(--surface); color:var(--ink); }
+
+        /* ===== TAB 3: BOOKS ===== */
+        .promo-container { max-width:920px; margin:0 auto; background:var(--surface); border-radius:20px; border:1px solid var(--line); overflow:hidden; }
+        .promo-hero { background:#0b120e; color:#fff; padding:42px 32px; text-align:center; position:relative; overflow:hidden; border-bottom:1px solid var(--line); }
+        .promo-hero::before { content:''; position:absolute; left:50%; top:-160px; transform:translateX(-50%); width:520px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(52,211,153,.30), transparent 70%); }
+        .promo-hero > * { position:relative; z-index:1; }
+        .promo-hero h2 { font-size:25px; font-weight:800; margin-bottom:12px; letter-spacing:-.5px; color:#f3f8f5; }
+        .promo-hero h2 .hl { background:linear-gradient(120deg,#6ee7a8,#34d399); -webkit-background-clip:text; background-clip:text; color:transparent; }
+        .promo-hero p { font-size:14.5px; color:#9fb0a6; line-height:1.65; margin:0 auto 5px; max-width:600px; }
+        .promo-hero p strong { color:var(--mint); }
+        .promo-content { padding:38px 32px; }
+
+        .study-flow { display:flex; align-items:stretch; gap:14px; background:var(--surface2); border:1px solid var(--line); border-radius:14px; padding:22px; margin-bottom:38px; }
+        .flow-step { display:flex; gap:12px; align-items:flex-start; flex:1; }
+        .flow-num { flex-shrink:0; width:30px; height:30px; border-radius:50%; background:linear-gradient(120deg,#6ee7a8,#34d399); color:var(--green-deep); font-weight:800; font-size:14px; display:flex; align-items:center; justify-content:center; box-shadow:0 0 18px rgba(52,211,153,.4); }
+        .flow-step strong { color:var(--ink); font-size:15px; }
+        .flow-step p { font-size:13px; color:var(--ink2); margin-top:4px; line-height:1.5; }
+        .flow-arrow { align-self:center; color:var(--green); font-size:22px; font-weight:800; }
+
+        .book-block { display:flex; gap:24px; align-items:flex-start; padding:26px 0; border-top:1px solid var(--line); }
+        .book-block.first { border-top:none; padding-top:4px; }
+        .book-block > img { width:165px; flex-shrink:0; border-radius:10px; box-shadow:0 8px 26px rgba(0,0,0,.45); border:1px solid var(--line); }
+        .book-info h3 { font-size:19px; color:var(--ink); font-weight:800; margin-bottom:5px; }
+        .book-credit { font-size:12.5px; color:var(--muted); font-weight:600; margin-bottom:12px; }
+        .book-info > p { font-size:14px; color:var(--ink2); line-height:1.7; margin-bottom:12px; }
+        .book-info > p strong { color:var(--mint); }
+        .book-use { margin:0 0 14px 18px; }
+        .book-use li { font-size:13.5px; color:var(--ink2); line-height:1.6; margin-bottom:5px; }
+        .sample-btn { display:inline-flex; align-items:center; gap:6px; padding:10px 18px; background:rgba(52,211,153,.08); color:var(--mint); border:1px solid rgba(52,211,153,.28); border-radius:10px; font-size:13.5px; font-weight:700; text-decoration:none; transition:.15s; }
+        .sample-btn:hover { background:rgba(52,211,153,.16); border-color:var(--green); }
+        .promo-foot { text-align:center; font-size:13px; color:var(--muted); margin-top:8px; padding:18px 20px; background:var(--surface2); border-radius:12px; border:1px solid var(--line); line-height:1.7; }
+        .promo-foot strong { color:var(--ink); }
+        .promo-foot strong.hl { color:var(--mint); }
+        .sec-h.mini { font-size:16px; margin-bottom:18px; }
+        .sec-h.mini::before { width:16px; height:16px; }
+
+        /* ===== FOOTER ===== */
+        footer { background:#0b120e; color:var(--ink2); text-align:center; padding:34px 20px; font-size:13px; line-height:1.85; border-top:1px solid var(--line); margin-top:50px; }
+        footer .fname { color:var(--ink); font-size:15px; font-weight:800; }
+        footer .faddr { font-size:12.5px; color:var(--muted); }
+        footer .fkakao { display:inline-block; margin-top:12px; color:var(--green-deep); font-weight:800; text-decoration:none; background:linear-gradient(120deg,#6ee7a8,#34d399); padding:8px 18px; border-radius:9px; box-shadow:0 0 22px rgba(52,211,153,.3); }
+
+        /* ===== 적중 자랑 (교재탭 버튼·배지) ===== */
+        .credit-badge { display:inline-block; font-size:11px; font-weight:800; color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); padding:2px 9px; border-radius:999px; margin-left:6px; vertical-align:middle; box-shadow:0 0 14px rgba(52,211,153,.4); }
+        .hit-btn { margin-top:6px; display:inline-flex; align-items:center; gap:7px; padding:11px 18px; font-size:13.5px; font-weight:800; color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); border:none; border-radius:11px; cursor:pointer; box-shadow:0 0 26px rgba(52,211,153,.45); transition:.2s; }
+        .hit-btn:hover { transform:translateY(-2px); box-shadow:0 0 38px rgba(52,211,153,.7); }
+
+        /* ===== 적중 모달 (팝업) ===== */
+        .hit-overlay { position:fixed; inset:0; z-index:1000; background:rgba(4,8,6,.78); backdrop-filter:blur(4px); display:none; align-items:center; justify-content:center; padding:24px; animation:fadeIn .25s ease; }
+        .hit-overlay.show { display:flex; }
+        .hit-modal { width:100%; max-width:680px; max-height:88vh; overflow-y:auto; background:var(--surface); border:1px solid var(--line2); border-radius:22px; box-shadow:0 0 70px rgba(52,211,153,.35), 0 30px 80px rgba(0,0,0,.6); position:relative; }
+        .hit-modal-hero { background:#0b120e; padding:30px 30px 26px; border-radius:22px 22px 0 0; border-bottom:1px solid var(--line); position:relative; overflow:hidden; }
+        .hit-modal-hero::before { content:''; position:absolute; right:-100px; top:-130px; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle,rgba(52,211,153,.45),transparent 70%); }
+        .hit-modal-hero > * { position:relative; z-index:1; }
+        .hit-modal-hero .tagx { display:inline-block; font-size:12px; font-weight:800; color:var(--mint); background:rgba(52,211,153,.13); border:1px solid rgba(52,211,153,.34); padding:5px 12px; border-radius:999px; margin-bottom:14px; box-shadow:0 0 22px rgba(52,211,153,.3); }
+        .hit-modal-hero h3 { font-size:23px; font-weight:800; color:#f3f8f5; line-height:1.34; letter-spacing:-.5px; }
+        .hit-modal-hero h3 .hl { background:linear-gradient(120deg,#6ee7a8,#34d399); -webkit-background-clip:text; background-clip:text; color:transparent; filter:drop-shadow(0 0 16px rgba(52,211,153,.5)); }
+        .hit-modal-hero p { font-size:13.5px; color:#9fb0a6; margin-top:12px; line-height:1.7; }
+        .hit-modal-hero p strong { color:var(--mint); }
+        .hit-stat-row { display:flex; gap:12px; margin-top:18px; flex-wrap:wrap; }
+        .hit-stat { background:rgba(255,255,255,.05); border:1px solid rgba(110,231,168,.18); border-radius:13px; padding:11px 18px; }
+        .hit-stat b { display:block; font-size:21px; font-weight:800; background:linear-gradient(120deg,#6ee7a8,#34d399); -webkit-background-clip:text; background-clip:text; color:transparent; }
+        .hit-stat span { font-size:11.5px; color:#7e8e85; font-weight:600; }
+        .hit-modal-body { padding:24px 30px 30px; }
+        .cmp-head { font-size:14px; font-weight:800; color:var(--ink); margin-bottom:14px; }
+        .cmp-head span { color:var(--muted); font-weight:600; font-size:12.5px; }
+        .cmp-wrap { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
+        .cmp-card { border:2px solid var(--line); border-radius:13px; padding:14px 15px; background:var(--surface2); }
+        .cmp-card.hit { border-color:var(--green); box-shadow:0 0 24px rgba(52,211,153,.18); }
+        .cmp-label { display:inline-block; font-size:11px; font-weight:800; padding:3px 11px; border-radius:7px; margin-bottom:8px; }
+        .cmp-card.ref .cmp-label { background:#1f2b24; color:#c2cdc6; }
+        .cmp-card.hit .cmp-label { background:linear-gradient(120deg,#6ee7a8,#34d399); color:var(--green-deep); }
+        .cmp-title { display:block; font-size:11.5px; color:var(--muted); font-weight:600; margin-bottom:9px; }
+        .cmp-title strong { color:var(--mint); font-weight:800; }
+        .cmp-card p { font-size:12px; line-height:1.65; color:var(--ink2); }
+        .cmp-card mark { background:rgba(52,211,153,.22); color:var(--mint); font-weight:700; padding:0 2px; border-radius:3px; }
+        .cmp-foot { font-size:12px; color:var(--mint); font-weight:600; margin:13px 0 20px; line-height:1.55; }
+        .hit-toggle { width:100%; padding:14px 18px; background:var(--surface2); border:1px solid var(--line2); color:var(--mint); font-size:14.5px; font-weight:800; border-radius:12px; cursor:pointer; display:flex; justify-content:center; align-items:center; gap:8px; transition:.18s; }
+        .hit-toggle:hover { background:#16261d; box-shadow:0 0 24px rgba(52,211,153,.18); }
+        .hit-list { margin-top:16px; display:none; }
+        .hit-list.show { display:block; animation:fadeIn .3s ease; }
+        .hit-table { width:100%; border-collapse:collapse; font-size:13.5px; }
+        .hit-table thead th { font-size:11.5px; font-weight:800; color:var(--muted); text-align:left; padding:0 12px 10px; letter-spacing:.3px; }
+        .hit-table tbody td { padding:13px 12px; border-top:1px solid var(--line); color:var(--ink2); vertical-align:middle; line-height:1.5; }
+        .hit-table tbody tr:hover td { background:rgba(52,211,153,.04); }
+        .hit-table td .topic { color:var(--ink); font-weight:700; }
+        .hit-table td .area { display:block; font-size:11.5px; color:var(--muted); margin-top:2px; }
+        .hit-final { white-space:nowrap; font-weight:800; color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); padding:4px 11px; border-radius:999px; font-size:12px; }
+        .hit-note { font-size:11.5px; color:var(--muted); margin-top:16px; line-height:1.6; }
+        .th-hint { color:var(--mint); font-weight:700; font-size:11px; }
+        .hit-table tbody tr.clickable { cursor:pointer; transition:.12s; }
+        .hit-table tbody tr.clickable:hover td { background:rgba(52,211,153,.08); }
+        .hit-table tbody tr.clickable td:last-child { display:flex; align-items:center; gap:8px; justify-content:flex-start; }
+        .row-go { font-size:11px; font-weight:800; color:var(--mint); opacity:.65; white-space:nowrap; }
+        .hit-table tbody tr.clickable:hover .row-go { opacity:1; }
+
+        /* 적중 자료 뷰어 */
+        .pair-overlay { position:fixed; inset:0; z-index:1100; background:rgba(4,8,6,.86); backdrop-filter:blur(5px); display:none; align-items:flex-start; justify-content:center; padding:24px; overflow-y:auto; animation:fadeIn .22s ease; }
+        .pair-overlay.show { display:flex; }
+        .pair-panel { width:100%; max-width:900px; margin:auto; background:var(--surface); border:1px solid var(--line2); border-radius:20px; padding:26px; position:relative; box-shadow:0 0 70px rgba(52,211,153,.3), 0 30px 80px rgba(0,0,0,.6); }
+        .pair-head { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:8px; padding-right:42px; }
+        .pair-head h4 { font-size:19px; font-weight:800; color:var(--ink); letter-spacing:-.3px; }
+        .pair-sub { font-size:12.5px; color:var(--muted); line-height:1.6; margin-bottom:20px; }
+        .pair-imgs { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+        .pair-col { display:flex; flex-direction:column; gap:9px; min-width:0; }
+        .pair-lbl { align-self:flex-start; font-size:12px; font-weight:800; padding:5px 12px; border-radius:7px; }
+        .pair-lbl.ref { background:#1f2b24; color:#c2cdc6; }
+        .pair-lbl.hit { background:linear-gradient(120deg,#6ee7a8,#34d399); color:var(--green-deep); }
+        .pair-col img { width:100%; border-radius:11px; border:1px solid var(--line); background:#fff; display:block; }
+        .hit-close { position:absolute; top:16px; right:18px; z-index:2; width:34px; height:34px; border-radius:50%; border:1px solid var(--line2); background:rgba(0,0,0,.35); color:#cdd5d0; font-size:18px; font-weight:700; cursor:pointer; line-height:1; transition:.15s; }
+        .hit-close:hover { background:rgba(52,211,153,.18); color:#fff; }
+        .hit-reopen { position:fixed; right:20px; bottom:20px; z-index:900; display:inline-flex; align-items:center; gap:7px; padding:12px 18px; font-size:13.5px; font-weight:800; color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); border:none; border-radius:999px; cursor:pointer; box-shadow:0 8px 28px rgba(0,0,0,.45), 0 0 30px rgba(52,211,153,.5); transition:.2s; }
+        .hit-reopen:hover { transform:translateY(-2px); box-shadow:0 10px 34px rgba(0,0,0,.5), 0 0 44px rgba(52,211,153,.8); }
+
+        /* ===== 원장 유튜브 ===== */
+        .yt-section { margin-bottom:34px; }
+        .yt-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+        .yt-card { position:relative; display:block; border-radius:14px; overflow:hidden; border:1px solid var(--line); aspect-ratio:16/9; box-shadow:0 0 22px rgba(52,211,153,.05); transition:.2s; background:#000; }
+        .yt-card img { width:100%; height:100%; object-fit:cover; display:block; opacity:.92; transition:.2s; }
+        .yt-card .yt-play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+        .yt-card .yt-play span { width:50px; height:50px; border-radius:50%; background:#ff0000; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 18px rgba(0,0,0,.5); transition:.2s; }
+        .yt-card .yt-play span::after { content:''; border-style:solid; border-width:9px 0 9px 16px; border-color:transparent transparent transparent #fff; margin-left:4px; }
+        .yt-card::after { content:''; position:absolute; left:0; right:0; bottom:0; height:46%; background:linear-gradient(to top, rgba(0,0,0,.55), transparent); pointer-events:none; }
+        .yt-card .yt-cap { position:absolute; left:12px; bottom:10px; z-index:2; font-size:12px; font-weight:700; color:#eef5f0; text-shadow:0 1px 4px rgba(0,0,0,.6); }
+        .yt-card:hover { transform:translateY(-4px); border-color:var(--green); box-shadow:0 14px 34px rgba(0,0,0,.45), 0 0 32px rgba(52,211,153,.25); }
+        .yt-card:hover img { opacity:1; }
+        .yt-card:hover .yt-play span { transform:scale(1.1); box-shadow:0 6px 24px rgba(255,0,0,.5); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width:980px){
+            .grid-4 { grid-template-columns:repeat(2,1fr); }
+            .uni-grid { grid-template-columns:repeat(2,1fr); }
+            .yt-grid { grid-template-columns:repeat(2,1fr); }
+            .hero-inner { flex-direction:column; align-items:stretch; }
+            .hero-left { max-width:none; }
+            .hero-spot { flex:none; max-width:360px; margin:6px auto 0; width:100%; }
+        }
+        @media (max-width:760px){
+            .hero { padding:34px 20px 36px; }
+            .hero h1 { font-size:27px; }
+            .brand img { width:46px; height:46px; }
+            .brand .bt b { font-size:18px; }
+            .brand .bt em { font-size:11px; }
+            .container { padding:22px 16px 40px; }
+            .lobby-tabs { flex-direction:column; }
+            .lobby-btn { text-align:left; padding:13px 16px; }
+            .grid-4 { grid-template-columns:1fr; }
+            .uni-grid { grid-template-columns:1fr; }
+            .yt-grid { grid-template-columns:repeat(2,1fr); }
+            .cmp-wrap { grid-template-columns:1fr; }
+            .pair-imgs { grid-template-columns:1fr; }
+            .pair-panel { padding:18px 16px; }
+            .hit-modal-hero { padding:24px 20px 20px; }
+            .uni-picker { display:none; }
+            .mobile-selector-wrap { display:block; }
+            .detail-display { padding:20px 16px; }
+            .dt-head { flex-direction:column; align-items:flex-start; }
+            .dt-head h2 { font-size:22px; }
+            .dt-cta { align-self:stretch; text-align:center; }
+            .dt-spec table { column-count:1; }
+            .study-flow { flex-direction:column; }
+            .flow-arrow { transform:rotate(90deg); align-self:center; }
+            .book-block { flex-direction:column; align-items:center; text-align:center; }
+            .book-block > img { width:52%; max-width:200px; }
+            .book-use { text-align:left; }
+            .btn-action { width:100%; text-align:center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== 적중 자랑 모달 ===== -->
+    <div class="hit-overlay" id="hitOverlay" onclick="if(event.target===this)closeHit()">
+        <div class="hit-modal">
+            <button class="hit-close" onclick="closeHit()" aria-label="닫기">&times;</button>
+            <div class="hit-modal-hero">
+                <span class="tagx">2026학년도 적중 실적</span>
+                <h3>김가경 [오름] 국어 원장,<br><span class="hl">국민대 국어 약술 13건 적중.</span></h3>
+                <p>실제 <strong>2026학년도 국민대 국어 기출</strong>과 <strong>가경T가 출제한 파이널 모의고사 1·2·3·4회</strong>를 대조해보면, 총 <strong>13건</strong>이 적중했습니다. <span style="color:#7e8e85;">(지문 적중 10건 + 서답형 문항 적중 3건)</span></p>
+                <div class="hit-stat-row">
+                    <div class="hit-stat"><b>13건</b><span>국어 적중 (지문 10·문항 3)</span></div>
+                    <div class="hit-stat"><b>1~4회</b><span>전 회차 적중</span></div>
+                    <div class="hit-stat"><b>국어</b><span>김가경 원장 출제</span></div>
+                </div>
+            </div>
+            <div class="hit-modal-body">
+                <div class="cmp-head">이렇게 적중했습니다 <span>· 예시: 순자의 악론(예악) — 파이널 1회</span></div>
+                <div class="cmp-wrap">
+                    <div class="cmp-card ref">
+                        <span class="cmp-label">제시문</span>
+                        <span class="cmp-title">2026학년도 국민대학교 국어 기출</span>
+                        <p>순자는 공자의 <mark>악론(樂論)</mark>을 계승하여 예술이 도덕적 가치를 반영하고 인간의 도덕성 함양에 기여해야 한다는 입장을 갖고 있었다. … 내용이 도덕적이고 형식도 아름다워 사람들을 이롭게 하는 <mark>덕음(德音)</mark>을 장려하고, … 덕을 해치는 <mark>익음(溺音)</mark>을 멀리해야 한다고 주장하였다. 순자는 덕음을 통해 유가의 이상적 정치인 <mark>왕도 정치(王道政治)</mark>를 실현할 수 있다고 보았다.</p>
+                    </div>
+                    <div class="cmp-card hit">
+                        <span class="cmp-label">지문 적중</span>
+                        <span class="cmp-title">CSM 약술형논술 국민대 <strong>파이널 1회</strong></span>
+                        <p>순자는 악을 토대로 이상 사회를 구현할 수 있다고 주장하며, 공자의 <mark>악론</mark>을 계승하여 예술이 도덕적 가치를 반영해야 한다고 보았다. … 사람들을 이롭게 하는 <mark>덕음(德音)</mark>을 장려하고, 정나라의 음란한 <mark>익음(溺音)</mark>을 멀리해야 한다고 주장하였다. 순자는 덕음을 통해 유가의 이상적 정치인 <mark>왕도 정치(王道政治)</mark>, 즉 덕으로 백성을 다스리는 것을 실현할 수 있다고 생각하였다.</p>
+                    </div>
+                </div>
+                <p class="cmp-foot">→ 제시문 소재·핵심 개념(악론·덕음·익음·왕도정치)이 그대로 일치. 아래에서 전체 13건의 적중 내역을 확인하세요.</p>
+
+                <button class="hit-toggle" onclick="toggleHitList(this)"><span>국민대 국어 적중 내역 전체 보기 (13건)</span> <span class="ar">▼</span></button>
+                <div class="hit-list" id="hitList">
+                    <table class="hit-table">
+                        <thead><tr><th>2026 국민대 국어 기출 (지문 적중 10건) <span class="th-hint">· 행을 누르면 적중 자료</span></th><th>CSM17 파이널 적중</th></tr></thead>
+                        <tbody>
+                            <tr class="clickable" onclick="showPair(0)"><td><span class="topic">순자의 악론(樂論) · 예악사상</span><span class="area">독서 — 예술의 도덕적 가치</span></td><td><span class="hit-final">파이널 1회</span><span class="row-go">자료 ▸</span></td></tr>
+                            <tr class="clickable" onclick="showPair(1)"><td><span class="topic">근대 감옥의 원리와 사회</span><span class="area">독서 — 규율 권력(판옵티콘)</span></td><td><span class="hit-final">파이널 1회</span><span class="row-go">자료 ▸</span></td></tr>
+                            <tr class="clickable" onclick="showPair(2)"><td><span class="topic">직접 민주주의 vs 대의 민주주의</span><span class="area">독서 — 루소의 일반의지(정치)</span></td><td><span class="hit-final">파이널 2회</span><span class="row-go">자료 ▸</span></td></tr>
+                            <tr class="clickable" onclick="showPair(3)"><td><span class="topic">자유의지와 결정론</span><span class="area">독서 — 도덕적 책임 · 양립가능론</span></td><td><span class="hit-final">파이널 2회</span><span class="row-go">자료 ▸</span></td></tr>
+                            <tr class="clickable" onclick="showPair(4)"><td><span class="topic">색채론 — 색은 물체의 고유한 성질인가</span><span class="area">독서 — 색채 인식(철학·과학)</span></td><td><span class="hit-final">파이널 3회</span><span class="row-go">자료 ▸</span></td></tr>
+                            <tr class="clickable" onclick="showPair(5)"><td><span class="topic">시장과 가격</span><span class="area">독서 — 수요·공급 / 가치(경제)</span></td><td><span class="hit-final">파이널 3회</span><span class="row-go">자료 ▸</span></td></tr>
+                            <tr class="clickable" onclick="showPair(6)"><td><span class="topic">데카르트의 본유관념</span><span class="area">독서 — 인식론 / 신 존재 증명</span></td><td><span class="hit-final">파이널 4회</span><span class="row-go">자료 ▸</span></td></tr>
+                            <tr class="clickable" onclick="showPair(7)"><td><span class="topic">외부효과와 시장 실패</span><span class="area">독서 — 피구세 · 코즈 정리(경제)</span></td><td><span class="hit-final">파이널 4회</span><span class="row-go">자료 ▸</span></td></tr>
+                            <tr class="clickable" onclick="showPair(8)"><td><span class="topic">사회실재론 vs 사회명목론</span><span class="area">독서 — 개인과 사회(사회학)</span></td><td><span class="hit-final">파이널 4회</span><span class="row-go">자료 ▸</span></td></tr>
+                            <tr class="clickable" onclick="showPair(9)"><td><span class="topic">역사 서술 — 사실과 해석</span><span class="area">독서 — 역사가의 주관·객관(인문)</span></td><td><span class="hit-final">파이널 4회</span><span class="row-go">자료 ▸</span></td></tr>
+                            <tr><td><span class="topic">서답형 문항 적중 3건</span><span class="area">독서 사실적·추론적 이해 기출 문항</span></td><td><span class="hit-final">문항 적중</span></td></tr>
+                        </tbody>
+                    </table>
+                    <p class="hit-note">※ 2026학년도 국민대학교 국어 영역 기준 · CSM17 「2026 씨에스엠 약술형논술 국민대 파이널」(김가경 원장 출제) 적중 자료에서 국어 영역만 발췌 · 지문 적중 10건 + 서답형 문항 적중 3건 = 총 13건. 제시문 주제명은 원문 기준 요약입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 적중 자료 뷰어 (행 클릭 시) ===== -->
+    <div class="pair-overlay" id="pairOverlay" onclick="if(event.target===this)closePair()">
+        <div class="pair-panel">
+            <button class="hit-close" onclick="closePair()" aria-label="닫기">&times;</button>
+            <div class="pair-head">
+                <h4 id="pairTitle"></h4>
+                <span class="hit-final" id="pairRound"></span>
+            </div>
+            <p class="pair-sub">실제 국민대 국어 기출 제시문과 가경T가 출제한 CSM17 파이널 모의고사 지문 — 같은 소재·논점이 적중했습니다.</p>
+            <div class="pair-imgs" id="pairBody">
+                <div class="pair-col">
+                    <span class="pair-lbl ref">제시문 · 2026 국민대 국어 기출</span>
+                    <img id="pairRef" alt="국민대 국어 기출 제시문" loading="lazy">
+                </div>
+                <div class="pair-col">
+                    <span class="pair-lbl hit">지문 적중 · CSM17 파이널</span>
+                    <img id="pairHit" alt="CSM17 파이널 적중 지문" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero">
+        <div class="glow-left"></div>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <span class="brand">
+                    <img src="images/oreum-emblem.png" alt="[오름] 국어 학원">
+                    <span class="bt"><b>[<i>오름</i>] 국어 학원</b><em>성적이 오름, 자신감이 오름</em></span>
+                </span>
+                <div class="badge">2027 약술형 논술 · 전국 15개 대학</div>
+                <h1>흩어진 모집요강을,<br><span class="hl">합격까지의 한 장 지도</span>로.</h1>
+                <p>[오름] 국어 학원이 정밀 정제한 전국 15개 약술형 논술 실시 대학의 전형 핵심 지표 및 대학별 합격 로드맵 통합 관제 센터입니다.</p>
+                <div class="stats">
+                    <div class="s"><b>15개</b><span>실시 대학</span></div>
+                    <div class="s"><b>100%</b><span>논술 전형 시대</span></div>
+                    <div class="s"><b>2027</b><span>최신 반영</span></div>
+                </div>
+            </div>
+            <div class="hero-spot">
+                <div class="hit-spot">
+                    <div class="kgk-wrap"><img src="images/kgk-profile.png" alt="가경T · [오름] 국어 원장"></div>
+                    <div class="hit-spot-txt">
+                        <span class="spot-badge">2026 국민대 국어 적중</span>
+                        <h3><b>13건</b> 적중</h3>
+                        <p>실제 2026학년도 국민대 국어 기출과 <strong>가경T가 출제한 파이널 1·2·3·4회</strong>를 대조해보면, 총 <strong>13건</strong>이 적중했습니다.</p>
+                        <button class="spot-btn" onclick="openHit()">어떻게 적중했는지 보기 →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="lobby-tabs">
+            <button id="lobby-tab-0" class="lobby-btn active" onclick="switchLobbyPanel(0)">총괄 비교표 · 요약 가이드</button>
+            <button id="lobby-tab-1" class="lobby-btn" onclick="switchLobbyPanel(1)">15개 대학별 상세 탐색</button>
+            <button id="lobby-tab-2" class="lobby-btn" onclick="switchLobbyPanel(2)">[오름] 약술 모의고사</button>
+        </div>
+
+        <!-- 1번 탭 -->
+        <div id="lobby-panel-0" class="lobby-panel active">
+            <div class="yt-section">
+                <div class="sec-h">김가경 [오름] 국어 원장 직강 <span class="sub">· 유튜브 바로가기</span></div>
+                <div class="yt-grid">
+                    <a class="yt-card" href="https://youtu.be/lo6MII5xzyE" target="_blank" rel="noopener" aria-label="김가경 원장 유튜브 영상 1">
+                        <img src="https://img.youtube.com/vi/lo6MII5xzyE/hqdefault.jpg" alt="김가경 원장 유튜브 영상 1" loading="lazy"><span class="yt-play"><span></span></span>
+                    </a>
+                    <a class="yt-card" href="https://youtu.be/WHAB9ooLNjE" target="_blank" rel="noopener" aria-label="김가경 원장 유튜브 영상 2">
+                        <img src="https://img.youtube.com/vi/WHAB9ooLNjE/hqdefault.jpg" alt="김가경 원장 유튜브 영상 2" loading="lazy"><span class="yt-play"><span></span></span>
+                    </a>
+                    <a class="yt-card" href="https://youtu.be/kXoH2W24K9w" target="_blank" rel="noopener" aria-label="김가경 원장 유튜브 영상 3">
+                        <img src="https://img.youtube.com/vi/kXoH2W24K9w/hqdefault.jpg" alt="김가경 원장 유튜브 영상 3" loading="lazy"><span class="yt-play"><span></span></span>
+                    </a>
+                    <a class="yt-card" href="https://youtu.be/y9ySVwrUW_Y" target="_blank" rel="noopener" aria-label="김가경 원장 유튜브 영상 4">
+                        <img src="https://img.youtube.com/vi/y9ySVwrUW_Y/hqdefault.jpg" alt="김가경 원장 유튜브 영상 4" loading="lazy"><span class="yt-play"><span></span></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="toggle-wrapper">
+                <button class="btn-toggle" onclick="toggleGuideCards()">
+                    <span>[오름] 국어 학원의 약술형 논술 핵심 요약 가이드</span> <span id="toggle-arrow">▲</span>
+                </button>
+                <div class="toggle-content" id="guide-content" style="display:block;">
+                    <div class="grid-4">
+                        <div class="card-tip">
+                            <div class="ic">1</div>
+                            <h3>논술 100% 전형 확대</h3>
+                            <p>가천대·삼육대·서경대·동덕여대를 비롯한 주요 대학이 내신을 반영하지 않는 논술 100% 선발로 돌아섰습니다. 학생부가 불리했던 수험생도 당일 답안만으로 결과를 뒤집을 수 있는 구간이 넓어졌습니다.</p>
+                        </div>
+                        <div class="card-tip">
+                            <div class="ic">2</div>
+                            <h3>수능 최저, 대학마다 갈린다</h3>
+                            <p>수원대·한국공학대처럼 최저를 적용하지 않는 곳과 가천대·국민대·삼육대·동덕여대처럼 최저를 두는 곳이 분명히 나뉩니다. 지원 대학의 최저 유무부터 확인하고 등급 전략을 세워야 합니다.</p>
+                        </div>
+                        <div class="card-tip">
+                            <div class="ic">3</div>
+                            <h3>EBS 연계, 약술의 핵심 변수</h3>
+                            <p>약술형 논술은 일반 수리·인문논술과 달리 EBS 수능특강·수능완성과의 연계 체감이 매우 높습니다. 공통 문항을 반복해 손으로 풀어 두는 것이 가장 확실한 대비입니다.</p>
+                        </div>
+                        <div class="card-tip">
+                            <div class="ic">4</div>
+                            <h3>계열별 문항 비중 점검</h3>
+                            <p>같은 대학이라도 인문계열은 국어, 자연계열은 수학 문항 비중이 큽니다. 지원 계열의 문항 구성을 확인하고 강점 과목에 무게를 싣는 조정이 필요합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sec-h">2027 전국 주요 약술형 논술 실시대학 종합 비교 <span class="sub">· 카드를 눌러 상세 분석으로</span></div>
+            <div class="uni-grid" id="uni-grid"></div>
+            <p class="note">※ 2027학년도 각 대학 모집요강 기준 · 최종 확인 2026-06-10 · 지원 전 반드시 각 대학 공식 모집요강 원문을 확인하시기 바랍니다.</p>
+        </div>
+
+        <!-- 2번 탭 -->
+        <div id="lobby-panel-1" class="lobby-panel">
+            <div class="sec-h">대학별 전형 한눈에 분석 <span class="sub">· 대학을 고르면 전형 리포트가 열립니다</span></div>
+            <div class="uni-picker" id="uni-picker"></div>
+            <div class="mobile-selector-wrap">
+                <select class="mobile-select" id="mobile-univ-select" onchange="handleMobileSelect(this.value)"></select>
+            </div>
+            <div class="detail-display" id="detail-card-container"></div>
+        </div>
+
+        <!-- 3번 탭 -->
+        <div id="lobby-panel-2" class="lobby-panel">
+            <div class="promo-container">
+                <div class="promo-hero">
+                    <h2>어려워지는 약술,<br><span class="hl">국어는 [오름]이 적중시킵니다.</span></h2>
+                    <p><strong>대학으로 가는 마지막 역전의 기회.</strong></p>
+                    <p>약술형 논술 국어의 공통 출제 기반은 EBS 수능특강·수능완성입니다. [오름] 국어 학원 강사진이 직접 출제·검수한 CSM17 약술형 논술 국어 모의고사로, 기출 코드 분석부터 실전 적중 훈련까지 한 흐름으로 이어집니다.</p>
+                </div>
+                <div class="promo-content">
+                    <div class="study-flow">
+                        <div class="flow-step">
+                            <span class="flow-num">1</span>
+                            <div><strong>기출 분석으로 출제 코드 파악</strong><p>국민대·가천대 등 약술형 국어 기출을 제시문·발문 단위로 해부합니다.</p></div>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <span class="flow-num">2</span>
+                            <div><strong>실전 모의고사로 적중 훈련</strong><p>CSM17 파이널 모의고사로 시험장 형식 그대로 시간 안에 써냅니다.</p></div>
+                        </div>
+                    </div>
+
+                    <div class="sec-h mini">씨에스엠(CSM17) 약술형 논술 국어 모의고사 <span class="sub">· [오름] 국어 강사진 출제·검수</span></div>
+
+                    <div class="book-block first">
+                        <img src="images/books/yaksul-kookmin-final.png" alt="국민대 약술형 논술 국어 모의고사">
+                        <div class="book-info">
+                            <h3>국민대 약술형 논술 국어 모의고사</h3>
+                            <p class="book-credit">출제 · <strong>김가경 [오름] 국어 원장</strong></p>
+                            <p>국민대 약술형 논술 국어 영역 대비 실전 모의고사입니다. <strong>작년(2026학년도) CSM17 국민대 파이널을 김가경 원장이 직접 출제</strong>해, 실제 국민대 국어 기출에 <strong>총 13건(지문 10·문항 3) 적중</strong>시켰습니다.</p>
+                            <ul class="book-use">
+                                <li>독서 제시문 기반 사실적·추론적·비판적 이해 문항을 실전 형식으로</li>
+                                <li>키워드 추출·조건 요약 등 감점 방어 서술 훈련</li>
+                            </ul>
+                            <button class="hit-btn" onclick="openHit()">🏆 국민대 국어 적중 내역 보기</button>
+                        </div>
+                    </div>
+
+                    <div class="book-block">
+                        <img src="images/books/yaksul-gachon-final.png" alt="가천대 약술형 논술 국어 모의고사">
+                        <div class="book-info">
+                            <h3>가천대 약술형 논술 국어 모의고사</h3>
+                            <p class="book-credit">출제 · <strong>김예담 선생님</strong> &nbsp;|&nbsp; 검수 · <strong>김예담 · 양원철 선생님</strong> <span class="credit-badge">모두 [오름] 국어 강사</span></p>
+                            <p>가천대 약술형 논술 국어 영역의 실전 형식 그대로 구성한 모의고사입니다. 문학·독서 제시문 기반 약술 문항을 쉬운 난이도부터 실전 수준까지 단계적으로 훈련합니다.</p>
+                            <ul class="book-use">
+                                <li>가천대 출제 형식과 답안지 양식에 맞춘 실전 훈련</li>
+                                <li>단계별 난이도 구성으로 약점을 보완한 뒤 실전 마무리</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="promo-foot">※ 본 모의고사는 약술형 논술 전문 콘텐츠 회사인 <strong class="hl">씨에스엠(CSM17)</strong>의 모의고사 콘텐츠로, <strong class="hl">김가경 원장과 김예담 선생님, 양원철 선생님이 출제 및 검수에 참여</strong>했습니다. [오름] 국어 학원 약술형 논술 수업에도 이 모의고사를 활용합니다.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleGuideCards() {
+            const content = document.getElementById('guide-content');
+            const arrow = document.getElementById('toggle-arrow');
+            if (content.style.display === 'block') { content.style.display = 'none'; arrow.textContent = '▼'; }
+            else { content.style.display = 'block'; arrow.textContent = '▲'; }
+        }
+
+        function switchLobbyPanel(panelIdx) {
+            document.querySelectorAll('.lobby-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.lobby-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(`lobby-panel-${panelIdx}`).classList.add('active');
+            document.getElementById(`lobby-tab-${panelIdx}`).classList.add('active');
+        }
+
+        const univData = [
+            { name: "가천대학교", volume: "1,036명", ratio: "논술 100%", lowCut: "있음 (학과별 상이)", range: "수학 I, 수학 II / 국어 (문학, 독서 등) ※의약계열은 미적분 포함", date: "11.29(일)~12.01(화)", trend: "약술형 논술을 준비한다면 출발점으로 삼을 만한 곳이 가천대입니다. 2027학년도 선발 규모가 1,036명으로 가장 크고, 내신을 일절 반영하지 않은 채 논술만 100%로 당락을 가립니다. 다만 의예(6명)·한의예(7명)·약학(6명) 등 의약 계열은 국어 없이 미적분까지 포함한 수학 8문항으로만 치르고 최저 기준도 높은 편이라, 일반 학과와 분리해 별도 전략을 세워 두는 편이 안전합니다.", page: "gachon.html", file_guide: "gachon_guide.pdf", file_yokang: "gachon_yokang.pdf", has_yokang: true, has_guide: true },
+            { name: "강남대학교", volume: "309명", ratio: "논술 80% + 교과 20%", lowCut: "없음 (미적용)", range: "수학 I, 수학 II / 국어 (문학, 독서) ※계열별 문항 비율 상이", date: "11.28(토)", trend: "교과는 상위 20개 과목만 보고 1등급 100점과 7등급 94점의 간격이 6점뿐이라, 내신이 5~6등급이어도 감점 타격이 크지 않습니다. 대신 계열별로 국어·수학의 문항 수와 배점이 인문 8:2, 공학 3:7, 자유전공 5:5로 갈리므로, 지원 계열의 가중치를 먼저 확인하고 어느 과목에 힘을 실을지 정해 두는 것이 좋습니다.", page: "gangnam.html", file_guide: "gangnam_guide.pdf", file_yokang: "gangnam_yokang.pdf", has_yokang: true, has_guide: true },
+            { name: "국민대학교", volume: "206명", ratio: "논술 100%", lowCut: "있음 (2개 합 6 이내)", range: "인문: 국어8+수학2 / 자연: 수학8+국어2 ※자연계 미적분 포함", date: "인문 12.05(토) / 자연 12.06(일)", trend: "국민대는 오직 논술 성적 100%로 당락을 결정합니다. 단 2개 영역 등급 합 6 이내라는 수능 최저가 걸려 있어, 논술과 함께 두 영역 등급 관리를 병행해야 합니다. 자연계열은 출제 범위에 미적분이 들어가고 수학 배점이 80%까지 올라가므로, 미적분 단답형을 정확하고 빠르게 처리하는 능력이 사실상 점수를 좌우합니다.", page: "kookmin.html", file_guide: "kookmin_guide.pdf", file_yokang: "kookmin_yokang.pdf", has_yokang: true, has_guide: true },
+            { name: "동덕여자대학교", volume: "266명", ratio: "논술 100%", lowCut: "있음 (2개 합 6 이내)", range: "인문사회: 국어6+수학2 / 자연: 수학6+국어2 (수I, 수II / 국어 전반)", date: "11.28(토)", trend: "2027학년도부터 길게 쓰던 서술형 대신 핵심만 압축하는 약술형으로 시험이 개편됐습니다. 내신은 전혀 반영하지 않는 논술 100% 전형이고, 국어·수학·영어·탐구(상위 1과목) 가운데 2개 영역 합 6 이내의 공통 최저가 붙습니다. 60분 안에 소문항이 묶인 8문항을 하나도 빠뜨리지 않고 풀어내는 실전 운영 능력에서 결과가 갈립니다.", page: "dongduk.html", file_guide: "dongduk_guide.pdf", file_yokang: "dongduk_yokang.pdf", has_yokang: true, has_guide: false },
+            { name: "삼육대학교", volume: "272명", ratio: "논술 100%", lowCut: "있음 (일반 1개 3등급 / 약학 3합 5)", range: "인문 국9+수6 / 자연 국6+수9 ※약학은 수학 8문항(미적분 포함)", date: "11.23(월) ~ 11.24(화)", trend: "내신 요소를 빼고 논술 100%로 뽑는 전형입니다. 최저는 학과별로 달라, 일반 학과가 1개 영역 3등급인 반면 약학과는 3개 영역 합 5등급으로 한층 빡빡합니다. 특히 약학과는 국어 없이 미적분 포함 수학 8문항으로만 치러지므로, 배점 큰 미적분 풀이 과정을 정확히 써내는 최상위권 수리 약술 대비가 필수입니다.", page: "sahmyook.html", file_guide: "sahmyook_guide.pdf", file_yokang: "sahmyook_yokang.pdf", has_yokang: true, has_guide: true },
+            { name: "상명대학교", volume: "98명", ratio: "논술 90% + 교과 10%", lowCut: "없음 (미적용)", range: "수학 I, II / 국어 전범위 (화작, 언매 포함)", date: "인문 10.30(금) / 자연 10.31(토)", trend: "상명대는 사실상 시험장 답안에서 점수가 결정됩니다. 반영 비율이 논술 90%·교과 10%인데, 교과는 등급 간 격차가 좁아 내신 변별력이 약하기 때문입니다. 국어 범위가 공통과목뿐 아니라 화법과 작문, 언어와 매체까지 아우르므로, 선택하지 않은 영역이라도 핵심 개념을 한 번씩 훑어 두는 것이 국어 대비의 시작점입니다.", page: "sangmyung.html", file_guide: "sangmyung_guide.pdf", file_yokang: "sangmyung_yokang.pdf", has_yokang: true, has_guide: true },
+            { name: "서경대학교", volume: "214명", ratio: "논술 100%", lowCut: "없음 (미적용)", range: "계열 공통: 국어 4문항 + 수학 4문항 (수I, 수II / 문학, 독서)", date: "11.01(일)", trend: "학생부도, 수능 최저도 보지 않고 논술 성적만으로 100% 선발합니다. 인문·자연을 가르지 않아 모든 모집단위가 '국어 4문항 + 수학 4문항'의 동일한 8문항을 풉니다. 계열 변별이 없는 만큼 EBS 연계 문항을 얼마나 정확히 맞히느냐가 곧 점수이므로, 익숙한 유형도 실수 없이 마무리하는 훈련이 핵심입니다.", page: "seokyeong.html", file_guide: "seokyeong_guide.pdf", file_yokang: "seokyeong_yokang.pdf", has_yokang: true, has_guide: false },
+            { name: "수원대학교", volume: "434명", ratio: "논술 75% + 교과 25%", lowCut: "없음 (미적용)", range: "수학 I, 수학 II / 국어 (독서, 문학)", date: "자연 11.21(토) / 인문 11.22(일)", trend: "수능 최저 없이 434명을 선발하는 전형입니다. 논술 75%에 교과 25%가 더해지지만 기본점수 650점이 깔려 있고 문항 배점이 150점이라, 내신이 미치는 영향은 체감보다 작습니다. 출제가 수학 I·II와 국어 독서·문학으로 묶이고 EBS 연계 체감도 높은 편이어서, 수능특강·수능완성 문항을 반복해 익혀 두는 전략이 특히 잘 먹힙니다.", page: "suwon.html", file_guide: "suwon_guide.pdf", file_yokang: "suwon_yokang.pdf", has_yokang: true, has_guide: true },
+            { name: "신한대학교", volume: "186명", ratio: "논술 90% + 교과 10%", lowCut: "없음 (미적용)", range: "계열 공통: 국어 7문항 + 수학 7문항 (수I, 수II / 문학, 독서)", date: "11.29(일)", trend: "신한대는 186명 선발로 모집인원이 확정됐습니다. 1,000점 만점에서 900점(90%)이 논술이고 교과 10%마저 우수 10과목만 반영하니, 결국 논술 점수가 합격을 가릅니다. 시험지는 계열과 상관없이 국어 7문항·수학 7문항으로 비중이 같아, 한쪽 과목이 약하면 총점에 그대로 노출됩니다.", page: "shinhan.html", file_guide: "shinhan_guide.pdf", file_yokang: "shinhan_yokang.pdf", has_yokang: true, has_guide: false },
+            { name: "을지대학교", volume: "214명", ratio: "논술 80% + 교과 20%", lowCut: "없음 (미적용)", range: "계열 공통: 국어 7문항 + 수학 7문항 (수I, 수II / 언매, 문학, 독서)", date: "10.16(금) ~ 10.17(토)", trend: "보건·의료로 잘 알려진 을지대지만, 논술우수자 전형에서는 수능 최저를 적용하지 않습니다. 계열 구분 없이 국어·수학을 각 7문항씩 1:1로 공통 출제하는 것이 특징입니다. 특히 국어 범위에 '언어와 매체'의 문법 요소가 들어 있어, 화법과 작문 선택자라도 이 문법 파트를 따로 챙겨 둬야 국어에서 흔들리지 않습니다.", page: "eulji.html", file_guide: "eulji_guide.pdf", file_yokang: "eulji_yokang.pdf", has_yokang: true, has_guide: true },
+            { name: "한국공학대학교", volume: "200명", ratio: "논술 80% + 교과 20%", lowCut: "없음 (미적용)", range: "수리논술 단독 9문항 (수학 I, 수학 II)", date: "11.22(일)", trend: "선발 규모는 200명입니다. 수능 최저가 없고 국어도 출제되지 않으며, 수학 I·II 범위의 수리논술 9문항만 단독으로 평가하는 공학 특화 전형입니다. 국어 부담을 덜고 수학으로 승부하려는 이공계 수험생이 강점을 살리기 좋은 구조입니다.", page: "kpu.html", file_guide: "kpu_guide.pdf", file_yokang: "kpu_yokang.pdf", has_yokang: true, has_guide: false },
+            { name: "한국기술교육대", volume: "150명", ratio: "논술 100%", lowCut: "없음 (미적용)", range: "공학: 수리논술(수I,II) / 사회: 자료제시형 국어,사회", date: "11.25(수)", trend: "내신을 반영하지 않고 논술 성적 100%로만 뽑습니다. 사교육 의존을 줄이려는 기조가 뚜렷해, EBS 연계 교재의 기본 개념을 정확히 풀어내는지를 핵심으로 봅니다. 같은 전형이라도 공학·ICT계열은 수학 I·II 수리논술, 사회융합계열은 국어·사회 자료제시형 언어논술로 성격이 갈리므로, 지원 계열부터 확인하고 준비해야 합니다.", page: "koreatech.html", file_guide: "koreatech_guide.pdf", file_yokang: "koreatech_yokang.pdf", has_yokang: true, has_guide: true },
+            { name: "한국외대(글로벌)", volume: "68명 (자연)", ratio: "논술 100%", lowCut: "있음 (2개 합 6 이내)", range: "자연계열: 약술형 수리논술 포맷 기조 실시 (총 452명 중 글로벌 자연계 68명 선발)", date: "11.29(일)", trend: "한국외대(글로벌)는 2027학년도 논술로 총 452명을 뽑지만, 우리가 대비하는 약술형 수리논술이 적용되는 곳은 글로벌캠퍼스 자연계열 68명뿐입니다. 교과 등급은 전혀 반영하지 않고 논술 100%로만 합격을 가르며, 수능 최저는 2개 영역 합 6 이내가 붙습니다. 따라서 지원 계열을 자연계열로 정확히 잡은 뒤, 수학 I·II 단답·약술형 훈련과 2합 6 확보를 함께 가져가는 것이 관건입니다.", page: "hufs.html", file_guide: "hufs_guide.pdf", file_yokang: "hufs_yokang.pdf", has_yokang: true, has_guide: false },
+            { name: "한신대학교", volume: "231명", ratio: "논술 80% + 교과 20%", lowCut: "없음 (미적용)", range: "인문: 국10+수5 / 자연: 수10+국5 (수I, 수II / 문학, 독서)", date: "12.05(토)", trend: "수능 최저 없이 231명을 선발하며, 모집인원은 유동제로 굴러갑니다. 인문은 국어 10·수학 5문항, 자연은 국어 5·수학 10문항으로 출제돼 지원 계열에 따라 비중이 또렷하게 갈립니다. 무엇보다 답안 수정이 허용되지 않아 화이트나 수정테이프를 쓸 수 없으므로, 처음부터 한 번에 정확히 써 내려가는 훈련이 곧 합격선입니다.", page: "hanshin.html", file_guide: "hanshin_guide.pdf", file_yokang: "hanshin_yokang.pdf", has_yokang: true, has_guide: false },
+            { name: "홍익대학교(세종)", volume: "195명", ratio: "논술 90% + 교과 10%", lowCut: "있음 (1개 영역 4등급 이내)", range: "인문: 국어+사회 통합교과형 / 자연: 수학 7문항 (수I, 수II)", date: "11.22(일)", trend: "수능 최저가 1개 영역 4등급 이내라 통과 부담은 가벼운 편이고, 합격은 논술 90% 성적에서 갈립니다. 다만 계열에 따라 시험지가 완전히 달라져, 인문은 국어·사회 교과를 엮은 15개 제시문 기반의 단답·단문형, 자연은 수학 I·II 범위의 서술형 7문항으로 출제됩니다. 지원할 계열 하나에 맞춰 준비 방향을 한 갈래로 좁혀 두는 편이 유리합니다.", page: "hongik_sejong.html", file_guide: "hongik_sejong.pdf", file_yokang: "hongik_sejong_yokang.pdf", has_yokang: true, has_guide: false }
+        ];
+
+        function shortLowCut(lowCut) {
+            if (lowCut.includes("없음")) return "최저 없음";
+            if (lowCut.includes("2개 합 6") || lowCut.includes("2개 영역")) return "2합 6";
+            if (lowCut.includes("1개 영역 4")) return "1개 4등급";
+            if (lowCut.includes("1개 3등급") || lowCut.includes("1개 영역 3")) return "1개 3등급";
+            return "최저 있음";
+        }
+
+        function switchTab(index) {
+            document.querySelectorAll('.uni-pill').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.univ-detail-card').forEach(card => card.classList.remove('active'));
+            const targetBtn = document.getElementById(`tab-btn-${index}`);
+            const targetCard = document.getElementById(`card-${index}`);
+            if (targetBtn) { targetBtn.classList.add('active'); targetBtn.scrollIntoView({behavior:'smooth', block:'nearest', inline:'nearest'}); }
+            if (targetCard) targetCard.classList.add('active');
+            const sel = document.getElementById('mobile-univ-select');
+            if (sel) sel.value = `card-${index}`;
+        }
+
+        function handleMobileSelect(value) { switchTab(value.replace('card-', '')); }
+
+        function goDetail(index) { switchLobbyPanel(1); switchTab(index); window.scrollTo({top:0, behavior:'smooth'}); }
+
+        function openHit() { document.getElementById('hitOverlay').classList.add('show'); document.body.style.overflow='hidden'; }
+        function closeHit() { document.getElementById('hitOverlay').classList.remove('show'); document.body.style.overflow=''; }
+
+        var hitPairs = [
+            {t:'순자의 악론 · 예악사상', r:'파이널 1회', ref:'p41', hit:'p42'},
+            {t:'근대 감옥의 원리와 사회', r:'파이널 1회', ref:'p66', hit:'p67'},
+            {t:'직접 민주주의 vs 대의 민주주의', r:'파이널 2회', ref:'p48', hit:'p49'},
+            {t:'자유의지와 결정론', r:'파이널 2회', ref:'p53', hit:'p54'},
+            {t:'색채론 — 색은 물체의 고유한 성질인가', r:'파이널 3회', ref:'p56', hit:'p57'},
+            {t:'시장과 가격', r:'파이널 3회', ref:'p62', hit:'p63'},
+            {t:'데카르트의 본유관념', r:'파이널 4회', ref:'p43', hit:'p44'},
+            {t:'외부효과와 시장 실패', r:'파이널 4회', ref:'p46', hit:'p47'},
+            {t:'사회실재론 vs 사회명목론', r:'파이널 4회', ref:'p51', hit:'p52'},
+            {t:'역사 서술 — 사실과 해석', r:'파이널 4회', ref:'p60', hit:'p61'}
+        ];
+        function showPair(i) {
+            var d = hitPairs[i]; if (!d) return;
+            document.getElementById('pairTitle').textContent = d.t;
+            document.getElementById('pairRound').textContent = d.r;
+            document.getElementById('pairRef').src = 'images/hit/' + d.ref + '.png';
+            document.getElementById('pairHit').src = 'images/hit/' + d.hit + '.png';
+            document.getElementById('pairBody').scrollTop = 0;
+            document.getElementById('pairOverlay').classList.add('show');
+        }
+        function closePair() { document.getElementById('pairOverlay').classList.remove('show'); }
+        function toggleHitList(btn) {
+            var list = document.getElementById('hitList');
+            list.classList.toggle('show');
+            var ar = btn.querySelector('.ar');
+            if (ar) ar.textContent = list.classList.contains('show') ? '▲' : '▼';
+        }
+        document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ if(document.getElementById('pairOverlay').classList.contains('show')) closePair(); else closeHit(); } });
+
+        window.onload = function() {
+            const uniGrid = document.getElementById('uni-grid');
+            const sideBtnContainer = document.getElementById('uni-picker');
+            const detailContainer = document.getElementById('detail-card-container');
+            const mobileSelect = document.getElementById('mobile-univ-select');
+
+            univData.forEach((univ, index) => {
+                const isNone = univ.lowCut.includes("없음");
+                const rangeMain = univ.range.split('※')[0].trim();
+
+                let yokangButton = `<a href="./files/${univ.file_yokang}" download class="btn-dl" onclick="event.stopPropagation()">요강 PDF</a>`;
+                let guideButton = `<a href="./files/${univ.file_guide}" download class="btn-dl" onclick="event.stopPropagation()">가이드</a>`;
+                if (!univ.has_yokang) yokangButton = `<span class="btn-dl disabled" title="아직 자료가 공지되지 않았습니다." onclick="event.stopPropagation()">요강 미공지</span>`;
+                if (!univ.has_guide) guideButton = `<span class="btn-dl disabled" title="아직 자료가 공지되지 않았습니다." onclick="event.stopPropagation()">가이드 미공지</span>`;
+
+                const card = `
+                    <div class="uni-card" role="link" tabindex="0" onclick="location.href='${univ.page}'" onkeydown="if(event.key==='Enter')location.href='${univ.page}'">
+                        <div class="uc-top">
+                            <span class="u">${univ.name}</span>
+                            <span class="tag ${isNone ? 'no' : 'yes'}">${shortLowCut(univ.lowCut)}</span>
+                        </div>
+                        <div class="uc-rows">
+                            <div class="r"><span>모집</span><b>${univ.volume}</b></div>
+                            <div class="r"><span>논술 : 교과</span><b>${univ.ratio}</b></div>
+                            <div class="r wide"><span>출제 범위</span><b>${rangeMain}</b></div>
+                            <div class="r"><span>고사 일정</span><b class="dt">${univ.date}</b></div>
+                        </div>
+                        <div class="uc-foot">
+                            ${yokangButton}${guideButton}
+                            <a class="uc-detail" href="${univ.page}" onclick="event.stopPropagation()">상세 분석 →</a>
+                        </div>
+                    </div>`;
+                uniGrid.innerHTML += card;
+
+                const activeClass = index === 0 ? 'active' : '';
+                sideBtnContainer.innerHTML += `<button id="tab-btn-${index}" class="uni-pill ${activeClass}" onclick="switchTab(${index})">${univ.name}</button>`;
+                mobileSelect.innerHTML += `<option value="card-${index}">${univ.name}</option>`;
+
+                let specTableRows = `
+                    <tr><th>2027 모집 인원</th><td><strong>${univ.volume}</strong></td></tr>
+                    <tr><th>요소별 반영 비율</th><td>${univ.ratio}</td></tr>
+                    <tr><th>수능 최저학력기준</th><td><span class="${isNone ? 'badge-none':'badge-yes'}">${univ.lowCut}</span></td></tr>
+                    <tr><th>출제 범위 상세</th><td>${univ.range.split('※')[0].trim()}${univ.range.includes('※') ? '<br><span>※' + univ.range.split('※')[1].trim() + '</span>' : ''}</td></tr>
+                    <tr><th>논술고사 일정</th><td><strong>${univ.date}</strong></td></tr>
+                `;
+
+                if(univ.name === "가천대학교") {
+                    specTableRows = `
+                        <tr><th>2027 모집 인원</th><td><strong>1,036명 확정</strong> (간호 77명, 반도체 73명, 의예 6명, 한의예 7명, 약학 6명 등)</td></tr>
+                        <tr><th>요소별 반영 비율</th><td><strong>논술 100%</strong> (내신 반영 요소 완전 무력화)</td></tr>
+                        <tr><th>수능 최저학력기준<br>(세부 분할 지표)</th><td>
+                            • 일반 전 모집단위: 1개 영역 3등급 이내<br>
+                            • 바이오로직스학과: 2개 영역 등급 합 5 이내<br>
+                            • 의예과: 3개 영역 각 1등급 (탐구 2과목 평균)<br>
+                            • 한의예과: 2개 영역 각 1등급 (탐구 2과목 모두 1등급)<br>
+                            • 약학과: 3개 영역 등급 합 5 이내 (탐구 2과목 평균)
+                        </td></tr>
+                        <tr><th>출제 문항 및 형태</th><td>
+                            • 일반계열: 총 13문항 [인문: 국어8+수학5 / 자연: 수학8+국어5] (수I, 수II / 국어 전반)<br>
+                            • 의약계열(의·한·약): <strong>수학 단일 8문항</strong> 출제 (수I, 수II, <strong>미적분</strong> 범위 포함)
+                        </td></tr>
+                        <tr><th>논술고사 세부 일정</th><td>
+                            • 고사장 확인 공지: 2026. 11. 17. (화)<br>
+                            • <strong>의예과/한의예과/약학과: 2026. 11. 29. (일)</strong><br>
+                            • 인문/간호/바이오/배터리: 2026. 11. 30. (월)<br>
+                            • 자연계열 전체 학과: 2026. 12. 01. (화)
+                        </td></tr>
+                    `;
+                } else if(univ.name === "국민대학교") {
+                    specTableRows = `
+                        <tr><th>2027 모집 인원</th><td><strong>206명 확정</strong> (인문·자연계열 선발)</td></tr>
+                        <tr><th>요소별 반영 비율</th><td><strong>논술평가 100%</strong> (교과 성적 미반영)</td></tr>
+                        <tr><th>수능 최저학력기준</th><td>인문/자연 공통: 국어, 수학, 영어, 탐구영역 중 <strong>2개 영역 등급 합 6 이내</strong> (상위 1과목 반영)</td></tr>
+                        <tr><th>출제 비율 및 구성</th><td>
+                            • 인문계열: 국어 교과 80% (8문항) + 수학 교과 20% (2개 문항)<br>
+                            • 자연계열: 국어 교과 20% (2문항) + 수학 교과 80% (8개 문항, <strong>미적분 범위 포함</strong>)
+                        </td></tr>
+                        <tr><th>논술 가이드 핵심요약</th><td>
+                            • 주관식 단답형 및 단문형 서술 포맷 (총 90분 고사 시간)<br>
+                            • 지문 내 핵심어(키워드) 추출 및 조건에 맞춰 짧은 문장으로 요약하는 감점 방어 필요<br>
+                            • 비판적·창의적 이해를 위한 도식화 문제 해결력 요구
+                        </td></tr>
+                    `;
+                } else if(univ.name === "동덕여자대학교") {
+                    specTableRows = `
+                        <tr><th>2027 모집 인원</th><td><strong>266명 확정 선발</strong> (경영융합학부 40명, 컴퓨터학 18명 등 정원 내)</td></tr>
+                        <tr><th>요소별 반영 비율</th><td><strong>논술고사 성적 100%</strong> (학교생활기록부 교과 반영 비율 전면 폐지)</td></tr>
+                        <tr><th>수능 최저학력기준</th><td>전 모집단위 공통: 국어, 수학, 영어, 탐구(1과목) 중 <strong>2개 영역 등급 합 6 이내</strong></td></tr>
+                        <tr><th>출제 범위 및 문항</th><td>
+                            • 인문사회: 국어 6문항 + 수학 2문항 (총 8개 주관식 단답/단문 소문항 결합형)<br>
+                            • 자연계열: 수학 6문항 + 국어 2문항 (총 8개 주관식 단답/단문 소문항 결합형)<br>
+                            • 국어 전 범위(화작/언매 포함) 및 공통수학(수I/수II) 범위 출제 (고사시간 60분)
+                        </td></tr>
+                        <tr><th>논술고사 일정</th><td><strong>2026. 11. 28. (토)</strong><br><span>※ 11. 25. (수) 17:00 입실장소 안내</span></td></tr>
+                    `;
+                } else if(univ.name === "삼육대학교") {
+                    specTableRows = `
+                        <tr><th>2027 모집 인원</th><td><strong>272명 확정 선발</strong> (신학과 및 예체능 일부 제외 전 학과)</td></tr>
+                        <tr><th>요소별 반영 비율</th><td><strong>논술고사 성적 100%</strong> (명목/실질 반영비율 교과 내신 전면 미반영)</td></tr>
+                        <tr><th>수능 최저학력기준<br>(확정 고시)</th><td>
+                            • 일반학과(부) 전 학과: 국어, 영어, 수학, 탐구(1과목) 중 <strong>1개 영역 3등급 이내</strong><br>
+                            • 약학과: 국어, 영어, 수학(미적분/기하), 과학탐구(1과목) 중 <strong>3개 영역 등급 합 5 이내</strong>
+                        </td></tr>
+                        <tr><th>동점자 선발 기준</th><td>논술고사 동점자 발생 시, 학생부 교과 성적 산출(비교평가)을 최종 연동 적용</td></tr>
+                    `;
+                } else if(univ.name === "한신대학교") {
+                    specTableRows = `
+                        <tr><th>2027 모집 인원</th><td><strong>231명 확정 선발</strong> (모집인원 유동제 적용)</td></tr>
+                        <tr><th>전형 반영 비율</th><td><strong>논술고사 80% (800점) + 학생부 교과 20% (200점)</strong> 일괄합산 구조</td></tr>
+                        <tr><th>수능 최저학력기준</th><td><strong>없음 (미적용)</strong></td></tr>
+                        <tr><th>문항수 및 세부 구성</th><td>
+                            • 인문계열: 국어 10문항 + 수학 5문항 (총 15문항 / 제한시간 80분)<br>
+                            • 자연계열: 수학 10문항 + 국어 5문항 (총 15문항 / 제한시간 80분)
+                        </td></tr>
+                        <tr><th>배점 및 채점 특징</th><td>
+                            • 문항당 8점 균일 적용 (15문항 × 8점 = 120점 만점)<br>
+                            • 논술 실질 산출식: 획득 점수(120점) + <strong>기본점수 680점</strong> 부여 = <strong>총 800점 만점 체제</strong><br>
+                            • 답안 형식: 지정된 주관식 노트 형식의 답안지 작성
+                        </td></tr>
+                    `;
+                } else if(univ.name === "한국외대(글로벌)") {
+                    specTableRows = `
+                        <tr><th>2027 모집 인원</th><td>논술전형 총 452명 중 <strong>글로벌캠퍼스 자연계열 68명 선발</strong></td></tr>
+                        <tr><th>요소별 반영 비율</th><td><strong>논술고사 성적 100%</strong> (교과 등급 성적 반영 요소 완전 폐지)</td></tr>
+                        <tr><th>수능 최저학력기준<br>(글로벌 자연 확정)</th><td>국어, 수학, 영어, 탐구(사회 혹은 과학탐구 1과목) 중 <strong>2개 영역 등급 합 6 이내</strong></td></tr>
+                        <tr><th>약술형 논술 주의사항</th><td>
+                            • 글로벌캠퍼스 인문계열 논술은 3문항 구조의 전통적인 '일반 인문논술' 포맷입니다.<br>
+                            • <strong>오직 글로벌캠퍼스 자연계열 모집단위에 한하여 단답형/약술형 형태의 수리논술 고사를 실시</strong>하므로 계열 구분에 극히 주의를 요합니다.
+                        </td></tr>
+                    `;
+                } else if(univ.name === "한국기술교육대") {
+                    specTableRows = `
+                        <tr><th>2027 모집 인원</th><td><strong>150명 확정 선발</strong></td></tr>
+                        <tr><th>요소별 반영 비율</th><td><strong>논술고사 성적 100%</strong> (학교생활기록부 교과 내신 무평가)</td></tr>
+                        <tr><th>수능 최저학력기준</th><td><strong>없음 (미적용)</strong></td></tr>
+                        <tr><th>출제 교과 범위</th><td>
+                            • 공학계열: 수리논술 (수학 I, 수학 II)<br>
+                            • 사회계열: 자료제시형 언어논술 (국어, 사회)
+                        </td></tr>
+                        <tr><th>시험 특징 요약</th><td>
+                            • 총 10~11문항 내외 출제 (세부 핵심 소문항 결합형 포맷)<br>
+                            • 고사 일정: <strong>2026. 11. 25. (수)</strong> 고사 확정 시행
+                        </td></tr>
+                    `;
+                }
+
+                const ratioMetric = univ.ratio.replace(' + ', ' · ');
+                const lowShort = shortLowCut(univ.lowCut);
+                specTableRows = specTableRows
+                    .replace(/2027 모집 인원/g, '모집 규모')
+                    .replace(/요소별 반영 비율/g, '전형 반영 구성')
+                    .replace(/전형 반영 비율/g, '전형 반영 구성')
+                    .replace(/수능 최저학력기준/g, '수능 최저 조건')
+                    .replace(/출제 문항 및 형태/g, '출제 구성')
+                    .replace(/출제 비율 및 구성/g, '출제 비율·구성')
+                    .replace(/출제 교과 범위/g, '출제 범위')
+                    .replace(/출제 범위 상세/g, '출제 범위')
+                    .replace(/논술고사 세부 일정/g, '논술 시행 일정')
+                    .replace(/논술고사 일정/g, '논술 시행일')
+                    .replace(/문항수 및 세부 구성/g, '문항 구성')
+                    .replace(/배점 및 채점 특징/g, '배점·채점 방식')
+                    .replace(/동점자 선발 기준/g, '동점자 처리')
+                    .replace(/논술 가이드 핵심요약/g, '출제 코드 요약')
+                    .replace(/약술형 논술 주의사항/g, '지원 시 유의점')
+                    .replace(/시험 특징 요약/g, '시험 특징');
+
+                const detailCard = `
+                    <div id="card-${index}" class="univ-detail-card ${activeClass}">
+                        <div class="dt-head">
+                            <div class="t"><span class="dt-kicker">2027 전형 리포트</span><h2>${univ.name}</h2></div>
+                            <a href="${univ.page}" class="dt-cta">대학 전체 분석 보기 →</a>
+                        </div>
+                        <div class="dt-metrics">
+                            <div class="m"><span>모집 규모</span><b>${univ.volume}</b></div>
+                            <div class="m"><span>전형 반영</span><b>${ratioMetric}</b></div>
+                            <div class="m"><span>수능 최저</span><b class="${isNone ? 'ok' : 'warn'}">${lowShort}</b></div>
+                            <div class="m"><span>논술 일정</span><b class="dt">${univ.date}</b></div>
+                        </div>
+                        <div class="dt-spec"><table>${specTableRows}</table></div>
+                        <div class="dt-insight">
+                            <span class="lbl">[오름] 국어 학원 · 원장 분석 코멘트</span>
+                            <p>${univ.trend}</p>
+                        </div>
+                        <p class="dt-note">※ 2027학년도 모집요강 기준 · 지원 전 각 대학 공식 모집요강 원문 확인 필수</p>
+                    </div>`;
+                detailContainer.innerHTML += detailCard;
+            });
+
+            var h = location.hash || '';
+            var m = h.match(/#detail=([^&]+)/);
+            if (m) {
+                var page = decodeURIComponent(m[1]);
+                var idx = univData.findIndex(function(u){ return u.page === page; });
+                switchLobbyPanel(1);
+                if (idx >= 0) switchTab(idx);
+            } else if (h === '#explorer') { switchLobbyPanel(1); }
+            else if (h === '#books') { switchLobbyPanel(2); }
+
+            // 적중 자랑은 히어로 스포트라이트 카드로 상시 노출 (자동 모달 없음)
+        };
+    </script>
+
+    <footer>
+        <span class="fname">[오름] 국어 학원</span><br>
+        2027학년도 약술형 논술 합격 마스터 허브<br>
+        <span class="faddr">경기 군포시 산본로386번길 5-27 본관 2층 · 031-391-7452 · 010-2452-7452</span><br>
+        <span class="faddr">카카오톡 채널 · 오름국어학원</span><br>
+        <span class="faddr">※ 본 자료는 각 대학 공식 모집요강을 기준으로 정리한 참고용이며, 지원 전 반드시 원문을 확인하시기 바랍니다.</span><br>
+        <a href="tel:031-391-7452" class="fkakao">전화 상담 · 031-391-7452</a>
+    </footer>
+</body>
+</html>
