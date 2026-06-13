@@ -121,6 +121,10 @@
         .uc-rows .r.wide { flex-direction:column; align-items:flex-start; gap:4px; }
         .uc-rows .r.wide > b { text-align:left; font-size:13px; font-weight:600; color:var(--ink2); line-height:1.5; }
         .uc-rows .r.wide > b.items { color:var(--mint); font-weight:700; }
+        .uc-rows .r.exam { align-items:flex-start; }
+        .exam-tag { display:inline-block; font-size:10.5px; font-weight:800; padding:2px 9px; border-radius:999px; margin-bottom:5px; letter-spacing:-.2px; }
+        .exam-tag.post { background:rgba(52,211,153,.16); color:var(--mint); }
+        .exam-tag.pre { background:rgba(251,191,36,.15); color:var(--amber); }
         .uc-foot { margin-top:auto; padding-top:14px; border-top:1px solid var(--line); display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
         .btn-dl { display:inline-flex; align-items:center; gap:4px; padding:6px 11px; background:rgba(52,211,153,.08); color:var(--mint); border:1px solid rgba(52,211,153,.24); border-radius:8px; font-size:12px; font-weight:700; text-decoration:none; cursor:pointer; transition:.15s; }
         .btn-dl:hover { background:rgba(52,211,153,.16); border-color:var(--green); }
@@ -650,6 +654,15 @@
             return "최저 있음";
         }
 
+        // 수능(11.19) 기준 고사일정 전/후 배지
+        function examBadge(dateStr) {
+            var m = dateStr.match(/(\d{1,2})\.(\d{1,2})/);
+            if (!m) return "";
+            var v = (+m[1]) * 100 + (+m[2]);
+            var pre = v < 1119;
+            return '<span class="exam-tag ' + (pre ? 'pre' : 'post') + '">' + (pre ? '수능 전' : '수능 후') + '</span><br>';
+        }
+
         function switchTab(index) {
             document.querySelectorAll('.uni-pill').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.univ-detail-card').forEach(card => card.classList.remove('active'));
@@ -724,7 +737,7 @@
                             <div class="r"><span>논술 : 교과</span><b>${univ.ratio}</b></div>
                             <div class="r wide"><span>출제 범위</span><b>${rangeMain}</b></div>
                             <div class="r wide"><span>영역별 문항</span><b class="items">${univ.items}</b></div>
-                            <div class="r"><span>고사 일정</span><b class="dt">${univ.date}</b></div>
+                            <div class="r exam"><span>고사 일정</span><b class="dt">${examBadge(univ.date)}${univ.date}</b></div>
                         </div>
                         <div class="uc-foot">
                             ${yokangButton}${guideButton}
@@ -875,7 +888,7 @@
                             <div class="m"><span>모집 규모</span><b>${univ.volume}</b></div>
                             <div class="m"><span>전형 반영</span><b>${ratioMetric}</b></div>
                             <div class="m"><span>수능 최저</span><b class="${isNone ? 'ok' : 'warn'}">${lowShort}</b></div>
-                            <div class="m"><span>논술 일정</span><b class="dt">${univ.date}</b></div>
+                            <div class="m"><span>논술 일정</span><b class="dt">${examBadge(univ.date)}${univ.date}</b></div>
                         </div>
                         <div class="dt-spec"><table>${specTableRows}</table></div>
                         <div class="dt-insight">
