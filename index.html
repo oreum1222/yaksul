@@ -57,18 +57,20 @@
         .hero-inner { display:flex; gap:36px; align-items:center; justify-content:space-between; }
         .hero-left { flex:1 1 auto; min-width:0; max-width:660px; }
 
-        /* 히어로 상시 적중 스포트라이트 (가경T) */
-        .hero-spot { flex:0 0 318px; }
-        .hit-spot { background:rgba(11,18,14,.55); backdrop-filter:blur(9px); border:1px solid var(--line2); border-radius:22px; overflow:hidden; box-shadow:0 0 54px rgba(52,211,153,.3), 0 20px 50px rgba(0,0,0,.45); }
+        /* 히어로 강사 스포트라이트 (가경T · 양원철T) */
+        .hero-spot { flex:0 0 auto; display:flex; gap:14px; align-items:stretch; flex-wrap:wrap; justify-content:center; }
+        .hit-spot { flex:0 0 290px; width:290px; display:flex; flex-direction:column; background:rgba(11,18,14,.55); backdrop-filter:blur(9px); border:1px solid var(--line2); border-radius:22px; overflow:hidden; box-shadow:0 0 54px rgba(52,211,153,.3), 0 20px 50px rgba(0,0,0,.45); }
         .hit-spot .kgk-wrap { position:relative; display:flex; justify-content:center; align-items:flex-end; padding-top:16px; background:radial-gradient(120% 80% at 50% 0%, rgba(52,211,153,.18), transparent 72%); }
         .hit-spot .kgk-wrap img { height:300px; width:auto; max-width:100%; object-fit:contain; display:block; filter:drop-shadow(0 8px 22px rgba(0,0,0,.5)); -webkit-mask-image:linear-gradient(to bottom, #000 74%, transparent 99%); mask-image:linear-gradient(to bottom, #000 74%, transparent 99%); }
-        .hit-spot-txt { padding:0 22px 22px; text-align:center; margin-top:-14px; }
+        .hit-spot-txt { padding:0 22px 22px; text-align:center; margin-top:-14px; flex:1; display:flex; flex-direction:column; }
+        .hit-spot-txt .spot-badge { align-self:center; }
         .spot-badge { display:inline-block; font-size:11.5px; font-weight:800; color:var(--mint); background:rgba(52,211,153,.13); border:1px solid rgba(52,211,153,.34); padding:5px 12px; border-radius:999px; margin-bottom:12px; box-shadow:0 0 18px rgba(52,211,153,.3); }
         .hit-spot-txt h3 { font-size:21px; font-weight:800; color:#f1f6f3; letter-spacing:-.4px; margin-bottom:9px; }
         .hit-spot-txt h3 b { font-size:30px; background:linear-gradient(120deg,#6ee7a8,#34d399); -webkit-background-clip:text; background-clip:text; color:transparent; filter:drop-shadow(0 0 16px rgba(52,211,153,.55)); }
         .hit-spot-txt p { font-size:12.5px; line-height:1.65; color:#9fb0a6; margin-bottom:16px; }
         .hit-spot-txt p strong { color:var(--mint); }
-        .spot-btn { width:100%; padding:12px; font-size:13.5px; font-weight:800; color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); border:none; border-radius:11px; cursor:pointer; box-shadow:0 0 26px rgba(52,211,153,.5); transition:.2s; animation:spotPulse 2.4s ease-in-out infinite; }
+        .spot-btn { width:100%; margin-top:auto; padding:12px; font-size:13.5px; font-weight:800; color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); border:none; border-radius:11px; cursor:pointer; box-shadow:0 0 26px rgba(52,211,153,.5); transition:.2s; animation:spotPulse 2.4s ease-in-out infinite; }
+        .spot-role { width:100%; margin-top:auto; padding:11px; font-size:12.5px; font-weight:700; color:var(--ink2); background:rgba(255,255,255,.03); border:1px solid var(--line2); border-radius:11px; }
         .spot-btn:hover { transform:translateY(-2px); box-shadow:0 0 40px rgba(52,211,153,.85); }
         @keyframes spotPulse { 0%,100%{ box-shadow:0 0 22px rgba(52,211,153,.4);} 50%{ box-shadow:0 0 40px rgba(52,211,153,.85);} }
 
@@ -314,7 +316,10 @@
             .yt-grid { grid-template-columns:repeat(2,1fr); }
             .hero-inner { flex-direction:column; align-items:stretch; }
             .hero-left { max-width:none; }
-            .hero-spot { flex:none; max-width:360px; margin:6px auto 0; width:100%; }
+            .hero-spot { flex:none; width:100%; max-width:620px; margin:8px auto 0; }
+        }
+        @media (max-width:640px){
+            .hit-spot { flex:1 1 100%; width:100%; }
         }
         @media (max-width:760px){
             .hero { padding:34px 20px 36px; }
@@ -457,6 +462,15 @@
                         <h3><b>13건</b> 적중</h3>
                         <p>실제 2026학년도 국민대 국어 기출과 <strong>가경T가 출제한 파이널 1·2·3·4회</strong>를 대조해보면, 총 <strong>13건</strong>이 적중했습니다.</p>
                         <button class="spot-btn" onclick="openHit()">어떻게 적중했는지 보기 →</button>
+                    </div>
+                </div>
+                <div class="hit-spot">
+                    <div class="kgk-wrap"><img src="images/yangwoncheol.png" alt="양원철T · [오름] 국어 강사"></div>
+                    <div class="hit-spot-txt">
+                        <span class="spot-badge">[오름] 국어 전임 강사</span>
+                        <h3><b>양원철</b>T</h3>
+                        <p>합격까지 함께 할<br><strong>꼼꼼하고 든든한</strong> 국어 강사</p>
+                        <div class="spot-role">약술형 논술 정규반 공동 지도</div>
                     </div>
                 </div>
             </div>
