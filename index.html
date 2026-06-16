@@ -199,6 +199,10 @@
         .dt-spec td { display:block; padding:0; font-size:13.5px; color:var(--ink2); line-height:1.68; }
         .dt-spec td strong { color:var(--ink); font-weight:800; }
         .dt-spec td span { color:var(--muted); }
+        .dt-spec td .emph-lg { font-size:20px; font-weight:800; color:var(--mint); display:inline-block; }
+        .dt-spec td strong.warn { color:var(--amber); }
+        .dt-spec tr.issue-row { border-left-color:var(--amber); background:rgba(251,191,36,.06); }
+        .dt-spec tr.issue-row th { color:var(--amber); }
         .badge-none { background:rgba(52,211,153,.15)!important; color:var(--mint)!important; padding:2px 9px; border-radius:6px; font-size:12.5px; font-weight:800; }
         .badge-yes { background:rgba(251,191,36,.13)!important; color:var(--amber)!important; padding:2px 9px; border-radius:6px; font-size:12.5px; font-weight:800; }
 
@@ -654,7 +658,7 @@
         }
 
         const univData = [
-            { name: "가천대학교", volume: "1,036명", ratio: "논술 100%", lowCut: "있음 (학과별 상이)", range: "수학 I, 수학 II / 국어 (문학, 독서 등) ※의약계열은 미적분 포함", date: "11.29(일)~12.01(화)", trend: "약술형 논술을 준비한다면 출발점으로 삼을 만한 곳이 가천대입니다. 2027학년도 선발 규모가 1,036명으로 가장 크고, 내신을 일절 반영하지 않은 채 논술만 100%로 당락을 가립니다. 다만 의예(6명)·한의예(7명)·약학(6명) 등 의약 계열은 국어 없이 미적분까지 포함한 수학 8문항으로만 치르고 최저 기준도 높은 편이라, 일반 학과와 분리해 별도 전략을 세워 두는 편이 안전합니다.", items: "인문 국8·수5 / 자연 국5·수8", page: "gachon.html", file_guide: "gachon_guide.pdf", file_yokang: "gachon_yokang.pdf", has_yokang: true, has_guide: true },
+            { name: "가천대학교", volume: "1,036명", ratio: "논술 100%", lowCut: "1개 영역 3등급 이내", range: "수학 I, 수학 II / 국어 (문학, 독서 등)", date: "11.30(월)~12.01(화)", trend: "약술형 논술을 준비한다면 출발점으로 삼을 만한 곳이 가천대입니다. 2027학년도 선발 규모가 1,036명으로 가장 크고, 내신(교과 점수)을 일절 반영하지 않은 채 논술만 100%로 당락을 가립니다. 수능 최저도 1개 영역 3등급 이내로 부담이 낮은 편입니다. 다만 올해는 인문 기준 문항 수가 국어 9→8, 수학 6→5로 줄었는데도 시험 시간은 80분 그대로여서, 한 문항이 차지하는 비중이 커진 만큼 정확한 서술 훈련이 한층 더 중요해졌습니다.", items: "인문 국8·수5 / 자연 국5·수8", page: "gachon.html", file_guide: "gachon_guide.pdf", file_yokang: "gachon_yokang.pdf", has_yokang: true, has_guide: true },
             { name: "강남대학교", volume: "309명", ratio: "논술 80% + 교과 20%", lowCut: "없음 (미적용)", range: "수학 I, 수학 II / 국어 (문학, 독서) ※계열별 문항 비율 상이", date: "11.28(토)", trend: "교과는 상위 20개 과목만 보고 1등급 100점과 7등급 94점의 간격이 6점뿐이라, 내신이 5~6등급이어도 감점 타격이 크지 않습니다. 대신 계열별로 국어·수학의 문항 수와 배점이 인문 8:2, 공학 3:7, 자유전공 5:5로 갈리므로, 지원 계열의 가중치를 먼저 확인하고 어느 과목에 힘을 실을지 정해 두는 것이 좋습니다.", items: "인문 국8·수2 / 공학 국3·수7 / 자유전공 국5·수5", page: "gangnam.html", file_guide: "gangnam_guide.pdf", file_yokang: "gangnam_yokang.pdf", has_yokang: true, has_guide: true },
             { name: "국민대학교", volume: "206명", ratio: "논술 100%", lowCut: "있음 (2개 합 6 이내)", range: "인문: 국어8+수학2 / 자연: 수학8+국어2 ※자연계 미적분 포함", date: "인문 12.05(토) / 자연 12.06(일)", trend: "국민대는 오직 논술 성적 100%로 당락을 결정합니다. 단 2개 영역 등급 합 6 이내라는 수능 최저가 걸려 있어, 논술과 함께 두 영역 등급 관리를 병행해야 합니다. 자연계열은 출제 범위에 미적분이 들어가고 수학 배점이 80%까지 올라가므로, 미적분 단답형을 정확하고 빠르게 처리하는 능력이 사실상 점수를 좌우합니다.", items: "인문 국8·수2 / 자연 국2·수8", page: "kookmin.html", file_guide: "kookmin_guide.pdf", file_yokang: "kookmin_yokang.pdf", has_yokang: true, has_guide: true },
             { name: "동덕여자대학교", volume: "266명", ratio: "논술 100%", lowCut: "있음 (2개 합 6 이내)", range: "인문사회: 국어6+수학2 / 자연: 수학6+국어2 (수I, 수II / 국어 전반)", date: "11.28(토)", trend: "2027학년도부터 길게 쓰던 서술형 대신 핵심만 압축하는 약술형으로 시험이 개편됐습니다. 내신은 전혀 반영하지 않는 논술 100% 전형이고, 국어·수학·영어·탐구(상위 1과목) 가운데 2개 영역 합 6 이내의 공통 최저가 붙습니다. 60분 안에 소문항이 묶인 8문항을 하나도 빠뜨리지 않고 풀어내는 실전 운영 능력에서 결과가 갈립니다.", items: "인문사회 국6·수2 / 자연 국2·수6", page: "dongduk.html", file_guide: "dongduk_guide.pdf", file_yokang: "dongduk_yokang.pdf", has_yokang: true, has_guide: false },
@@ -785,25 +789,16 @@
 
                 if(univ.name === "가천대학교") {
                     specTableRows = `
-                        <tr><th>2027 모집 인원</th><td><strong>1,036명 확정</strong> (간호 77명, 반도체 73명, 의예 6명, 한의예 7명, 약학 6명 등)</td></tr>
-                        <tr><th>요소별 반영 비율</th><td><strong>논술 100%</strong> (내신 반영 요소 완전 무력화)</td></tr>
-                        <tr><th>수능 최저학력기준<br>(세부 분할 지표)</th><td>
-                            • 일반 전 모집단위: 1개 영역 3등급 이내<br>
-                            • 바이오로직스학과: 2개 영역 등급 합 5 이내<br>
-                            • 의예과: 3개 영역 각 1등급 (탐구 2과목 평균)<br>
-                            • 한의예과: 2개 영역 각 1등급 (탐구 2과목 모두 1등급)<br>
-                            • 약학과: 3개 영역 등급 합 5 이내 (탐구 2과목 평균)
-                        </td></tr>
-                        <tr><th>출제 문항 및 형태</th><td>
-                            • 일반계열: 총 13문항 [인문: 국어8+수학5 / 자연: 수학8+국어5] (수I, 수II / 국어 전반)<br>
-                            • 의약계열(의·한·약): <strong>수학 단일 8문항</strong> 출제 (수I, 수II, <strong>미적분</strong> 범위 포함)
-                        </td></tr>
+                        <tr><th>2027 모집 인원</th><td><strong>1,036명 확정</strong> (간호 77명, 반도체 73명 등)</td></tr>
+                        <tr><th>요소별 반영 비율</th><td><strong>논술 100%</strong> (내신 (교과 점수) 반영 X)</td></tr>
+                        <tr><th>수능 최저학력기준</th><td><span class="emph-lg">1개 영역 3등급 이내</span></td></tr>
+                        <tr><th>출제 문항 및 형태</th><td>일반계열 총 13문항 [인문: 국어8+수학5 / 자연: 수학8+국어5] (수I, 수II / 국어 전반)</td></tr>
                         <tr><th>논술고사 세부 일정</th><td>
                             • 고사장 확인 공지: 2026. 11. 17. (화)<br>
-                            • <strong>의예과/한의예과/약학과: 2026. 11. 29. (일)</strong><br>
                             • 인문/간호/바이오/배터리: 2026. 11. 30. (월)<br>
                             • 자연계열 전체 학과: 2026. 12. 01. (화)
                         </td></tr>
+                        <tr class="issue-row"><th>⚠ 올해의 이슈</th><td>전년 대비 <strong>문항 수 감소</strong> — 인문 기준 <strong>국어 9 → 8 · 수학 6 → 5</strong>. <strong>시험 시간은 동일</strong>해, 문항당 부담이 커져 <strong class="warn">난도 상승 가능</strong></td></tr>
                     `;
                 } else if(univ.name === "국민대학교") {
                     specTableRows = `
