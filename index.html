@@ -79,6 +79,21 @@
         .class-info .ci-body { display:flex; flex-direction:column; gap:5px; }
         .class-info .ci-body b { font-size:21px; color:#f3f8f5; font-weight:800; letter-spacing:-.4px; }
         .class-info .ci-body span { font-size:16px; color:var(--mint); font-weight:700; }
+        .grad-trigger { margin-top:14px; width:100%; display:flex; align-items:center; gap:16px; background:rgba(251,191,36,.07); border:1px solid var(--line2); border-left:4px solid var(--amber); border-radius:16px; padding:18px 26px; cursor:pointer; transition:.18s; text-align:left; }
+        .grad-trigger:hover { background:rgba(251,191,36,.13); box-shadow:0 0 32px rgba(251,191,36,.18); transform:translateY(-1px); }
+        .grad-trigger .gt-ico { font-size:27px; line-height:1; }
+        .grad-trigger .gt-txt { display:flex; flex-direction:column; gap:3px; }
+        .grad-trigger .gt-txt b { font-size:18px; color:#f3f8f5; font-weight:800; letter-spacing:-.3px; }
+        .grad-trigger .gt-txt > span { font-size:14px; color:var(--amber); font-weight:700; }
+        .grad-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+        .grad-uni { background:var(--surface2); border:1px solid var(--line); border-radius:14px; padding:15px 18px; }
+        .grad-uni h4 { font-size:15px; font-weight:800; color:var(--mint); margin-bottom:11px; display:flex; align-items:center; gap:8px; }
+        .grad-uni h4 .cnt { font-size:11.5px; font-weight:800; color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); padding:2px 9px; border-radius:999px; }
+        .grad-uni ul { list-style:none; display:flex; flex-direction:column; gap:8px; margin:0; padding:0; }
+        .grad-uni li { font-size:14px; color:#cfe0d6; line-height:1.4; }
+        .grad-uni li b { color:#f3f8f5; font-weight:700; }
+        .grad-uni li .sch { color:#8fa399; font-size:12.5px; }
+        @media (max-width:560px) { .grad-grid { grid-template-columns:1fr; } }
         .hero-inner { display:flex; gap:36px; align-items:center; justify-content:space-between; }
         .hero-left { flex:1 1 auto; min-width:0; max-width:660px; }
 
@@ -467,6 +482,82 @@
         </div>
     </div>
 
+    <!-- ===== 2026 합격생 ===== -->
+    <div class="hit-overlay" id="gradOverlay" onclick="if(event.target===this)closeGrad()">
+        <div class="hit-modal">
+            <button class="hit-close" onclick="closeGrad()" aria-label="닫기">&times;</button>
+            <div class="hit-modal-hero">
+                <span class="tagx">2026학년도 합격 현황</span>
+                <h3>[오름]과 함께,<br><span class="hl">합격으로 올랐습니다.</span></h3>
+                <p>약술형 논술로 합격한 <strong>[오름] 국어 학원</strong> 학생들의 실제 합격 현황입니다. <span style="color:#7e8e85;">(개인정보 보호를 위해 성명 일부를 가립니다)</span></p>
+            </div>
+            <div class="hit-modal-body">
+                <div class="grad-grid">
+                    <div class="grad-uni">
+                        <h4>가천대학교 <span class="cnt">3</span></h4>
+                        <ul>
+                            <li><b>백○○</b> <span class="sch">(부흥고)</span> · 간호학과</li>
+                            <li><b>백○○</b> <span class="sch">(용호고)</span> · 반도체</li>
+                            <li><b>성○○</b> <span class="sch">(흥진고)</span> · 화공생명 배터리</li>
+                        </ul>
+                    </div>
+                    <div class="grad-uni">
+                        <h4>국민대학교 <span class="cnt">2</span></h4>
+                        <ul>
+                            <li><b>전○○</b> <span class="sch">(군포고)</span> · 신소재공학부</li>
+                            <li><b>최○○</b> <span class="sch">(군포고)</span> · 전자공학부</li>
+                        </ul>
+                    </div>
+                    <div class="grad-uni">
+                        <h4>한신대학교 <span class="cnt">2</span></h4>
+                        <ul>
+                            <li><b>박○○</b> <span class="sch">(산본고)</span> · 금융공학과</li>
+                            <li><b>강○○</b> <span class="sch">(산본고)</span> · AI SW</li>
+                        </ul>
+                    </div>
+                    <div class="grad-uni">
+                        <h4>수원대학교 <span class="cnt">2</span></h4>
+                        <ul>
+                            <li><b>성○○</b> <span class="sch">(흥진고)</span> · 공학계열</li>
+                            <li><b>김○○</b> <span class="sch">(용호고)</span> · 화공신소재공학</li>
+                        </ul>
+                    </div>
+                    <div class="grad-uni">
+                        <h4>서경대학교 <span class="cnt">1</span></h4>
+                        <ul>
+                            <li><b>윤○○</b> <span class="sch">(산본고)</span> · 합격</li>
+                        </ul>
+                    </div>
+                    <div class="grad-uni">
+                        <h4>을지대학교 <span class="cnt">1</span></h4>
+                        <ul>
+                            <li><b>양○○</b> <span class="sch">(용호고)</span> · 자율전공학부</li>
+                        </ul>
+                    </div>
+                    <div class="grad-uni">
+                        <h4>한국공학대학교 <span class="cnt">1</span></h4>
+                        <ul>
+                            <li><b>김○○</b> <span class="sch">(용호고)</span> · 합격</li>
+                        </ul>
+                    </div>
+                    <div class="grad-uni">
+                        <h4>한국기술교육대학교 <span class="cnt">1</span></h4>
+                        <ul>
+                            <li><b>이○○</b> <span class="sch">(용호고)</span> · 합격</li>
+                        </ul>
+                    </div>
+                    <div class="grad-uni">
+                        <h4>홍익대학교(세종) <span class="cnt">1</span></h4>
+                        <ul>
+                            <li><b>권○○</b> <span class="sch">(수리고)</span> · 자율전공</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="hit-note">※ [오름] 국어 학원 약술형 논술 수강생 기준 · 합격자 본인 동의 하에 게시하며, 개인정보 보호를 위해 성명 일부를 가립니다.</p>
+            </div>
+        </div>
+    </div>
+
     <header class="hero">
         <div class="glow-left"></div>
         <div class="hero-inner">
@@ -489,6 +580,10 @@
                         <span>일요일 13:00–16:00 · 주 1회 3시간</span>
                     </div>
                 </div>
+                <button class="grad-trigger" onclick="openGrad()">
+                    <span class="gt-ico">🏆</span>
+                    <span class="gt-txt"><b>2026 [오름] 합격생 보기</b><span>국민대·가천대·한신대 등 합격 현황 →</span></span>
+                </button>
             </div>
             <div class="hero-spot">
                 <div class="hit-spot">
@@ -517,8 +612,8 @@
 
         <div class="lobby-tabs">
             <button id="lobby-tab-0" class="lobby-btn active" onclick="switchLobbyPanel(0)">총괄 비교표 · 요약 가이드</button>
-            <button id="lobby-tab-1" class="lobby-btn" onclick="switchLobbyPanel(1)">15개 대학별 상세 탐색</button>
-            <button id="lobby-tab-2" class="lobby-btn" onclick="switchLobbyPanel(2)">[오름] 약술 모의고사</button>
+            <button id="lobby-tab-1" class="lobby-btn" onclick="switchLobbyPanel(1)">대학별 상세 탐색</button>
+            <button id="lobby-tab-2" class="lobby-btn" onclick="switchLobbyPanel(2)">[오름] × 씨에스엠 약술 모의고사</button>
         </div>
 
         <!-- 1번 탭 -->
@@ -712,6 +807,8 @@
 
         function openHit() { document.getElementById('hitOverlay').classList.add('show'); document.body.style.overflow='hidden'; }
         function closeHit() { document.getElementById('hitOverlay').classList.remove('show'); document.body.style.overflow=''; }
+        function openGrad() { document.getElementById('gradOverlay').classList.add('show'); document.body.style.overflow='hidden'; }
+        function closeGrad() { document.getElementById('gradOverlay').classList.remove('show'); document.body.style.overflow=''; }
 
         var hitPairs = [
             {t:'순자의 악론 · 예악사상', r:'파이널 1회', ref:'p41', hit:'p42'},
@@ -741,7 +838,7 @@
             var ar = btn.querySelector('.ar');
             if (ar) ar.textContent = list.classList.contains('show') ? '▲' : '▼';
         }
-        document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ if(document.getElementById('pairOverlay').classList.contains('show')) closePair(); else closeHit(); } });
+        document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ if(document.getElementById('pairOverlay').classList.contains('show')) closePair(); else if(document.getElementById('gradOverlay').classList.contains('show')) closeGrad(); else closeHit(); } });
 
         window.onload = function() {
             const uniGrid = document.getElementById('uni-grid');
