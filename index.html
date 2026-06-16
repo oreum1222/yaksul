@@ -147,9 +147,9 @@
         .uc-rows .r.wide > b { text-align:left; font-size:13px; font-weight:600; color:var(--ink2); line-height:1.5; }
         .uc-rows .r.wide > b.items { color:var(--mint); font-weight:700; }
         .uc-rows .r.exam { align-items:flex-start; }
-        .exam-tag { display:inline-block; font-size:10.5px; font-weight:800; padding:2px 9px; border-radius:999px; margin-bottom:5px; letter-spacing:-.2px; }
-        .exam-tag.post { background:rgba(52,211,153,.16); color:var(--mint); }
-        .exam-tag.pre { background:rgba(251,191,36,.15); color:var(--amber); }
+        .exam-tag { display:inline-block; font-size:15px; font-weight:900; padding:3px 13px; border-radius:999px; margin-bottom:6px; letter-spacing:-.2px; }
+        .exam-tag.post { background:rgba(52,211,153,.24); color:#7cf0b4; }
+        .exam-tag.pre { background:rgba(251,191,36,.24); color:#ffd45e; }
         .uc-foot { margin-top:auto; padding-top:14px; border-top:1px solid var(--line); display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
         .btn-dl { display:inline-flex; align-items:center; gap:4px; padding:6px 11px; background:rgba(52,211,153,.08); color:var(--mint); border:1px solid rgba(52,211,153,.24); border-radius:8px; font-size:12px; font-weight:700; text-decoration:none; cursor:pointer; transition:.15s; }
         .btn-dl:hover { background:rgba(52,211,153,.16); border-color:var(--green); }
@@ -186,7 +186,7 @@
         .dt-metrics .m { flex:1 1 150px; padding:16px 20px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
         .dt-metrics .m span { display:block; font-size:11px; color:var(--muted); font-weight:700; letter-spacing:.5px; margin-bottom:7px; }
         .dt-metrics .m b { font-size:16px; color:var(--ink); font-weight:800; line-height:1.35; }
-        .dt-metrics .m b.ok { color:var(--mint); }
+        .dt-metrics .m b.ok { color:var(--amber); }
         .dt-metrics .m b.warn { color:var(--amber); }
         .dt-metrics .m b.dt { color:var(--mint); font-size:14.5px; }
 
@@ -660,11 +660,11 @@
         const univData = [
             { name: "가천대학교", volume: "1,036명", ratio: "논술 100%", lowCut: "1개 영역 3등급 이내", range: "수학 I, 수학 II / 국어 (문학, 독서 등)", date: "11.30(월)~12.01(화)", trend: "약술형 논술을 준비한다면 출발점으로 삼을 만한 곳이 가천대입니다. 2027학년도 선발 규모가 1,036명으로 가장 크고, 내신(교과 점수)을 일절 반영하지 않은 채 논술만 100%로 당락을 가립니다. 수능 최저도 1개 영역 3등급 이내로 부담이 낮은 편입니다. 다만 올해는 인문 기준 문항 수가 국어 9→8, 수학 6→5로 줄었는데도 시험 시간은 80분 그대로여서, 한 문항이 차지하는 비중이 커진 만큼 정확한 서술 훈련이 한층 더 중요해졌습니다.", items: "인문 국8·수5 / 자연 국5·수8", page: "gachon.html", file_guide: "gachon_guide.pdf", file_yokang: "gachon_yokang.pdf", has_yokang: true, has_guide: true },
             { name: "강남대학교", volume: "309명", ratio: "논술 80% + 교과 20%", lowCut: "없음 (미적용)", range: "수학 I, 수학 II / 국어 (문학, 독서) ※계열별 문항 비율 상이", date: "11.28(토)", trend: "교과는 상위 20개 과목만 보고 1등급 100점과 7등급 94점의 간격이 6점뿐이라, 내신이 5~6등급이어도 감점 타격이 크지 않습니다. 대신 계열별로 국어·수학의 문항 수와 배점이 인문 8:2, 공학 3:7, 자유전공 5:5로 갈리므로, 지원 계열의 가중치를 먼저 확인하고 어느 과목에 힘을 실을지 정해 두는 것이 좋습니다.", items: "인문 국8·수2 / 공학 국3·수7 / 자유전공 국5·수5", page: "gangnam.html", file_guide: "gangnam_guide.pdf", file_yokang: "gangnam_yokang.pdf", has_yokang: true, has_guide: true },
-            { name: "국민대학교", volume: "206명", ratio: "논술 100%", lowCut: "있음 (2개 합 6 이내)", range: "인문: 국어8+수학2 / 자연: 수학8+국어2 ※자연계 미적분 포함", date: "인문 12.05(토) / 자연 12.06(일)", trend: "국민대는 오직 논술 성적 100%로 당락을 결정합니다. 단 2개 영역 등급 합 6 이내라는 수능 최저가 걸려 있어, 논술과 함께 두 영역 등급 관리를 병행해야 합니다. 자연계열은 출제 범위에 미적분이 들어가고 수학 배점이 80%까지 올라가므로, 미적분 단답형을 정확하고 빠르게 처리하는 능력이 사실상 점수를 좌우합니다.", items: "인문 국8·수2 / 자연 국2·수8", page: "kookmin.html", file_guide: "kookmin_guide.pdf", file_yokang: "kookmin_yokang.pdf", has_yokang: true, has_guide: true },
+            { name: "국민대학교", volume: "206명", ratio: "논술 100%", lowCut: "있음 (2개 합 6 이내)", range: "인문: 국어8+수학2 / 자연: 수학8+국어2 ※자연계 미적분 포함", date: "인문 12.05(토) / 자연 12.06(일)", trend: "국민대는 오직 논술 성적 100%로 당락을 결정합니다. 단 2개 영역 등급 합 6 이내라는 수능 최저가 걸려 있어, 논술과 함께 두 영역 등급 관리를 병행해야 합니다. 다른 학교들에 비해 가이드북 및 기출의 문항이 까다로워 꼼꼼한 대비가 필요하며, 교과서까지 범위에 들어 EBS 연계 교재만으로는 학습에 어려움이 있습니다. 시험을 준비할 수 있는 충분한 학습 기간이 필요합니다.", items: "인문 국8·수2 / 자연 국2·수8", page: "kookmin.html", file_guide: "kookmin_guide.pdf", file_yokang: "kookmin_yokang.pdf", has_yokang: true, has_guide: true },
             { name: "동덕여자대학교", volume: "266명", ratio: "논술 100%", lowCut: "있음 (2개 합 6 이내)", range: "인문사회: 국어6+수학2 / 자연: 수학6+국어2 (수I, 수II / 국어 전반)", date: "11.28(토)", trend: "2027학년도부터 길게 쓰던 서술형 대신 핵심만 압축하는 약술형으로 시험이 개편됐습니다. 내신은 전혀 반영하지 않는 논술 100% 전형이고, 국어·수학·영어·탐구(상위 1과목) 가운데 2개 영역 합 6 이내의 공통 최저가 붙습니다. 60분 안에 소문항이 묶인 8문항을 하나도 빠뜨리지 않고 풀어내는 실전 운영 능력에서 결과가 갈립니다.", items: "인문사회 국6·수2 / 자연 국2·수6", page: "dongduk.html", file_guide: "dongduk_guide.pdf", file_yokang: "dongduk_yokang.pdf", has_yokang: true, has_guide: false },
-            { name: "삼육대학교", volume: "272명", ratio: "논술 100%", lowCut: "있음 (일반 1개 3등급 / 약학 3합 5)", range: "인문 국9+수6 / 자연 국6+수9 ※약학은 수학 8문항(미적분 포함)", date: "11.23(월) ~ 11.24(화)", trend: "내신 요소를 빼고 논술 100%로 뽑는 전형입니다. 최저는 학과별로 달라, 일반 학과가 1개 영역 3등급인 반면 약학과는 3개 영역 합 5등급으로 한층 빡빡합니다. 특히 약학과는 국어 없이 미적분 포함 수학 8문항으로만 치러지므로, 배점 큰 미적분 풀이 과정을 정확히 써내는 최상위권 수리 약술 대비가 필수입니다.", items: "인문 국9·수6 / 자연 국6·수9", page: "sahmyook.html", file_guide: "sahmyook_guide.pdf", file_yokang: "sahmyook_yokang.pdf", has_yokang: true, has_guide: true },
-            { name: "상명대학교", volume: "98명", ratio: "논술 90% + 교과 10%", lowCut: "없음 (미적용)", range: "수학 I, II / 국어 전범위 (화작, 언매 포함)", date: "인문 10.30(금) / 자연 10.31(토)", trend: "상명대는 사실상 시험장 답안에서 점수가 결정됩니다. 반영 비율이 논술 90%·교과 10%인데, 교과는 등급 간 격차가 좁아 내신 변별력이 약하기 때문입니다. 국어 범위가 공통과목뿐 아니라 화법과 작문, 언어와 매체까지 아우르므로, 선택하지 않은 영역이라도 핵심 개념을 한 번씩 훑어 두는 것이 국어 대비의 시작점입니다.", items: "인문 국8·수2 / 자연 국2·수8", page: "sangmyung.html", file_guide: "sangmyung_guide.pdf", file_yokang: "sangmyung_yokang.pdf", has_yokang: true, has_guide: true },
-            { name: "서경대학교", volume: "214명", ratio: "논술 100%", lowCut: "없음 (미적용)", range: "계열 공통: 국어 4문항 + 수학 4문항 (수I, 수II / 문학, 독서)", date: "11.01(일)", trend: "학생부도, 수능 최저도 보지 않고 논술 성적만으로 100% 선발합니다. 인문·자연을 가르지 않아 모든 모집단위가 '국어 4문항 + 수학 4문항'의 동일한 8문항을 풉니다. 계열 변별이 없는 만큼 EBS 연계 문항을 얼마나 정확히 맞히느냐가 곧 점수이므로, 익숙한 유형도 실수 없이 마무리하는 훈련이 핵심입니다.", items: "계열 공통 국4·수4", page: "seokyeong.html", file_guide: "seokyeong_guide.pdf", file_yokang: "seokyeong_yokang.pdf", has_yokang: true, has_guide: false },
+            { name: "삼육대학교", volume: "272명", ratio: "논술 100%", lowCut: "있음 (일반 1개 3등급 / 약학 3합 5)", range: "인문 국9+수6 / 자연 국6+수9 ※약학은 수학 8문항(미적분 포함)", date: "11.23(월) ~ 11.24(화)", trend: "내신 요소를 빼고 논술 100%로 뽑는 전형입니다. 최저는 학과별로 달라, 일반 학과가 1개 영역 3등급인 반면 약학과는 3개 영역 합 5등급으로 한층 빡빡합니다. 삼육대는 보건 계열 학과가 많아 학생들이 선호하는 대학이므로, 철저한 전략을 가지고 학습에 임하여야 합격이 가능합니다.", items: "인문 국9·수6 / 자연 국6·수9", page: "sahmyook.html", file_guide: "sahmyook_guide.pdf", file_yokang: "sahmyook_yokang.pdf", has_yokang: true, has_guide: true },
+            { name: "상명대학교", volume: "98명", ratio: "논술 90% + 교과 10%", lowCut: "없음 (미적용)", range: "수학 I, II / 국어 전범위 (화작, 언매 포함)", date: "인문 10.30(금) / 자연 10.31(토)", trend: "상명대는 사실상 시험장 답안에서 점수가 결정됩니다. 반영 비율이 논술 90%·교과 10%인데, 교과는 등급 간 격차가 좁아 내신 변별력이 약하기 때문입니다. 국어 범위가 공통과목뿐 아니라 화법과 작문, 언어와 매체까지 아우르므로, 선택하지 않은 영역이라도 핵심 개념을 한 번씩 훑어 두는 것이 국어 대비의 시작점입니다. 수능 전에 논술 시험이 있어 학생이 부담을 느끼는 학교이지만, 그만큼 실질 경쟁률이 떨어지기도 하여 도전해 보는 것도 좋습니다.", items: "인문 국8·수2 / 자연 국2·수8", page: "sangmyung.html", file_guide: "sangmyung_guide.pdf", file_yokang: "sangmyung_yokang.pdf", has_yokang: true, has_guide: true },
+            { name: "서경대학교", volume: "214명", ratio: "논술 100%", lowCut: "없음 (미적용)", range: "계열 공통: 국어 4문항 + 수학 4문항 (수I, 수II / 문학, 독서)", date: "11.01(일)", trend: "학생부도, 수능 최저도 보지 않고 논술 성적만으로 100% 선발합니다. 인문·자연을 가르지 않아 모든 모집단위가 '국어 4문항 + 수학 4문항'의 동일한 8문항을 풉니다. 계열 변별이 없는 만큼 EBS 연계 문항을 얼마나 정확히 맞히느냐가 곧 점수이므로, 익숙한 유형도 실수 없이 마무리하는 훈련이 핵심입니다. 수능 전에 논술 시험이 있어 학생이 부담을 느끼는 학교이지만, 그만큼 실질 경쟁률이 떨어지기도 하여 도전해 보는 것도 좋습니다.", items: "계열 공통 국4·수4", page: "seokyeong.html", file_guide: "seokyeong_guide.pdf", file_yokang: "seokyeong_yokang.pdf", has_yokang: true, has_guide: false },
             { name: "수원대학교", volume: "434명", ratio: "논술 75% + 교과 25%", lowCut: "없음 (미적용)", range: "수학 I, 수학 II / 국어 (독서, 문학)", date: "자연 11.21(토) / 인문 11.22(일)", trend: "수능 최저 없이 434명을 선발하는 전형입니다. 논술 75%에 교과 25%가 더해지지만 기본점수 650점이 깔려 있고 문항 배점이 150점이라, 내신이 미치는 영향은 체감보다 작습니다. 출제가 수학 I·II와 국어 독서·문학으로 묶이고 EBS 연계 체감도 높은 편이어서, 수능특강·수능완성 문항을 반복해 익혀 두는 전략이 특히 잘 먹힙니다.", items: "인문 국10·수5 / 자연 국5·수10", page: "suwon.html", file_guide: "suwon_guide.pdf", file_yokang: "suwon_yokang.pdf", has_yokang: true, has_guide: true },
             { name: "신한대학교", volume: "186명", ratio: "논술 90% + 교과 10%", lowCut: "없음 (미적용)", range: "계열 공통: 국어 7문항 + 수학 7문항 (수I, 수II / 문학, 독서)", date: "11.29(일)", trend: "신한대는 186명 선발로 모집인원이 확정됐습니다. 1,000점 만점에서 900점(90%)이 논술이고 교과 10%마저 우수 10과목만 반영하니, 결국 논술 점수가 합격을 가릅니다. 시험지는 계열과 상관없이 국어 7문항·수학 7문항으로 비중이 같아, 한쪽 과목이 약하면 총점에 그대로 노출됩니다.", items: "계열 공통 국7·수7", page: "shinhan.html", file_guide: "shinhan_guide.pdf", file_yokang: "shinhan_yokang.pdf", has_yokang: true, has_guide: false },
             { name: "을지대학교", volume: "214명", ratio: "논술 80% + 교과 20%", lowCut: "없음 (미적용)", range: "계열 공통: 국어 7문항 + 수학 7문항 (수I, 수II / 언매, 문학, 독서)", date: "10.16(금) ~ 10.17(토)", trend: "보건·의료로 잘 알려진 을지대지만, 논술우수자 전형에서는 수능 최저를 적용하지 않습니다. 계열 구분 없이 국어·수학을 각 7문항씩 1:1로 공통 출제하는 것이 특징입니다. 특히 국어 범위에 '언어와 매체'의 문법 요소가 들어 있어, 화법과 작문 선택자라도 이 문법 파트를 따로 챙겨 둬야 국어에서 흔들리지 않습니다.", items: "계열 공통 국7·수7", page: "eulji.html", file_guide: "eulji_guide.pdf", file_yokang: "eulji_yokang.pdf", has_yokang: true, has_guide: true },
@@ -810,9 +810,9 @@
                             • 자연계열: 국어 교과 20% (2문항) + 수학 교과 80% (8개 문항, <strong>미적분 범위 포함</strong>)
                         </td></tr>
                         <tr><th>논술 가이드 핵심요약</th><td>
-                            • 주관식 단답형 및 단문형 서술 포맷 (총 90분 고사 시간)<br>
-                            • 지문 내 핵심어(키워드) 추출 및 조건에 맞춰 짧은 문장으로 요약하는 감점 방어 필요<br>
-                            • 비판적·창의적 이해를 위한 도식화 문제 해결력 요구
+                            • 주관식 단답형 및 서술형 문항 주의<br>
+                            • 다른 학교들과 달리 <strong>50~100자 이내 서술</strong>도 요구<br>
+                            • EBS 교재뿐만 아니라 <strong>교과서도 범위</strong>
                         </td></tr>
                     `;
                 } else if(univ.name === "동덕여자대학교") {
@@ -826,6 +826,7 @@
                             • 국어 전 범위(화작/언매 포함) 및 공통수학(수I/수II) 범위 출제 (고사시간 60분)
                         </td></tr>
                         <tr><th>논술고사 일정</th><td><strong>2026. 11. 28. (토)</strong><br><span>※ 11. 25. (수) 17:00 입실장소 안내</span></td></tr>
+                        <tr class="issue-row"><th>⚠ 올해의 이슈</th><td><strong>2027학년도 첫 시행</strong> — 기출이 없는 신설 전형이므로, 대학이 공개한 <strong class="warn">가이드북(예시 문항) 참고가 필수</strong>입니다.</td></tr>
                     `;
                 } else if(univ.name === "삼육대학교") {
                     specTableRows = `
