@@ -280,11 +280,11 @@
         footer .faddr { font-size:12.5px; color:var(--muted); }
         footer .faddr a { color:var(--mint); text-decoration:none; font-weight:700; }
         footer .faddr a:hover { text-decoration:underline; }
-        footer .fkakao { display:inline-block; margin-top:12px; color:var(--green-deep); font-weight:800; text-decoration:none; background:linear-gradient(120deg,#6ee7a8,#34d399); padding:8px 18px; border-radius:9px; box-shadow:0 0 22px rgba(52,211,153,.3); }
+        footer .fkakao { display:inline-flex; align-items:center; gap:7px; margin-top:12px; color:var(--mint); font-weight:800; text-decoration:none; background:rgba(52,211,153,.1); border:1px solid rgba(110,231,168,.4); padding:9px 18px; border-radius:10px; box-shadow:inset 0 0 18px rgba(52,211,153,.07), 0 0 18px rgba(52,211,153,.15); transition:.16s; vertical-align:middle; }
+        footer .fkakao:hover { border-color:var(--mint); box-shadow:0 0 26px rgba(52,211,153,.32); }
         footer .fkakao + .fkakao { margin-left:10px; }
-        footer .fkakao.fsms { background:linear-gradient(120deg,#fbcf5b,#f6b73c); box-shadow:0 0 22px rgba(251,191,36,.3); }
-        footer .fkakao.fkko { background:rgba(52,211,153,.1); border:1px solid rgba(110,231,168,.45); box-shadow:0 0 18px rgba(52,211,153,.18); color:var(--mint); }
-        footer .fkakao.fkko img { width:17px; height:17px; vertical-align:-4px; margin-right:5px; }
+        footer .fkakao svg { width:16px; height:16px; flex-shrink:0; }
+        footer .fkakao img { width:17px; height:17px; flex-shrink:0; }
 
         /* ===== 적중 자랑 (교재탭 버튼·배지) ===== */
         .credit-badge { display:inline-block; font-size:11px; font-weight:800; color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); padding:2px 9px; border-radius:999px; margin-left:6px; vertical-align:middle; box-shadow:0 0 14px rgba(52,211,153,.4); }
@@ -1035,8 +1035,8 @@
         <span class="faddr">경기 군포시 산본로386번길 5-27 본관 2층 · <a href="tel:031-391-7452">031-391-7452</a> · <a href="sms:010-2452-7452">010-2452-7452</a></span><br>
         <span class="faddr">카카오톡 채널 · 오름국어학원 · 학원 등록번호 제2474호</span><br>
         <span class="faddr">※ 본 자료는 각 대학 공식 모집요강을 기준으로 정리한 참고용이며, 지원 전 반드시 원문을 확인하시기 바랍니다.</span><br>
-        <a href="tel:031-391-7452" class="fkakao">📞 전화 상담 · 031-391-7452</a>
-        <a href="sms:010-2452-7452" class="fkakao fsms">✉️ 문자 상담 · 010-2452-7452</a>
+        <a href="tel:031-391-7452" class="fkakao"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>전화 상담 · 031-391-7452</a>
+        <a href="sms:010-2452-7452" class="fkakao"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H8l-4 4V6c0-1.1.9-2 2-2z"/></svg>문자 상담 · 010-2452-7452</a>
         <a href="http://pf.kakao.com/_ksxaCn/chat" target="_blank" rel="noopener" class="fkakao fkko"><img src="images/kakao-logo.svg" alt="카카오톡">카카오톡 상담</a>
     </footer>
 </body>
