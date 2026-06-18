@@ -83,6 +83,38 @@
         .hero .stats .kakao-cta .kc-txt > span { font-size:11.5px; font-weight:700; color:var(--mint); }
         /* 등장 애니메이션 초기 상태 — .anim은 모션 허용 시에만 부여(JS/GSAP 미동작 시 콘텐츠 항상 노출) */
         .anim .hero-left .brand, .anim .hero-left .badge, .anim .hero-left h1, .anim .hero-left .stats, .anim .hero-left .class-info, .anim .hero-left .grad-trigger, .anim .hero-spot .hit-spot { opacity:0; }
+
+        /* 유튜브 강의 반응 밴드 */
+        .yt-buzz { margin:4px 0 30px; }
+        .yt-buzz-head { display:flex; align-items:center; gap:12px; margin-bottom:7px; }
+        .yt-buzz-head .yt-ico { width:34px; height:24px; flex-shrink:0; }
+        .yt-buzz-head h2 { font-size:21px; font-weight:800; color:#f3f8f5; letter-spacing:-.5px; line-height:1.3; }
+        .yt-buzz-head h2 .hl { color:var(--mint); }
+        .yt-buzz-sub { font-size:13.5px; color:var(--muted); margin:0 0 18px 46px; line-height:1.55; }
+        .yt-buzz-sub b { color:var(--mint); font-weight:700; }
+        .yt-buzz-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+        .yt-cmt { background:var(--surface2); border:1px solid var(--line); border-radius:16px; padding:18px 20px; display:flex; gap:13px; }
+        .yt-cmt .av { width:38px; height:38px; flex-shrink:0; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:15px; color:var(--green-deep); background:linear-gradient(135deg,#6ee7a8,#34d399); }
+        .yt-cmt .c-body { flex:1; min-width:0; }
+        .yt-cmt .c-top { display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
+        .yt-cmt .c-name { font-size:12.5px; font-weight:700; color:#cfe0d6; }
+        .yt-cmt .c-when { font-size:11.5px; color:var(--muted); }
+        .yt-cmt .c-text { font-size:14px; line-height:1.65; color:#e3ece7; }
+        .yt-cmt .c-text .key { color:var(--mint); font-weight:700; }
+        .yt-cmt .c-likes { margin-top:10px; font-size:12px; color:var(--muted); display:flex; align-items:center; gap:6px; }
+        .yt-cmt .c-likes svg { width:14px; height:14px; opacity:.8; fill:currentColor; }
+        .yt-cmt .c-likes .heart { color:#ff5d7a; font-weight:700; }
+        .yt-buzz-cta { display:inline-flex; align-items:center; gap:9px; margin-top:18px; text-decoration:none; font-weight:800; font-size:14px; color:#f3f8f5; background:rgba(52,211,153,.1); border:1px solid rgba(110,231,168,.4); padding:10px 20px; border-radius:11px; transition:.16s; }
+        .yt-buzz-cta:hover { border-color:var(--mint); box-shadow:0 0 24px rgba(52,211,153,.3); transform:translateY(-1px); }
+        .yt-buzz-cta .yt-ico { width:22px; height:16px; }
+        @media (max-width:680px){ .yt-buzz-grid { grid-template-columns:1fr; } .yt-buzz-sub { margin-left:0; } }
+        /* 무한 흐르는 후기 마퀴 */
+        .yt-marquee { position:relative; overflow:hidden; padding:2px 0; -webkit-mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); }
+        .yt-track { display:flex; align-items:stretch; width:max-content; animation:yt-scroll 46s linear infinite; will-change:transform; }
+        .yt-marquee:hover .yt-track { animation-play-state:paused; }
+        .yt-track .yt-cmt { width:330px; flex-shrink:0; margin-right:14px; }
+        @keyframes yt-scroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+        @media (prefers-reduced-motion: reduce){ .yt-track { animation:none; flex-wrap:wrap; width:auto; } .yt-track .yt-cmt[aria-hidden="true"] { display:none; } .yt-track .yt-cmt { width:auto; flex:1 1 300px; margin-right:0; } }
         .class-info { margin-top:26px; display:flex; width:100%; align-items:center; gap:20px; background:rgba(52,211,153,.08); border:1px solid var(--line2); border-left:4px solid var(--green); border-radius:16px; padding:22px 28px; box-shadow:0 0 36px rgba(52,211,153,.15); }
         .class-info .ci-tag { font-size:13px; font-weight:800; color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); padding:9px 16px; border-radius:999px; white-space:nowrap; box-shadow:0 0 18px rgba(52,211,153,.4); }
         .class-info .ci-body { display:flex; flex-direction:column; gap:5px; }
@@ -630,6 +662,42 @@
 
     <div class="container">
 
+        <!-- 유튜브 강의 반응 -->
+        <section class="yt-buzz">
+            <div class="yt-buzz-head">
+                <svg class="yt-ico" viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11.2 6l6.6 4-6.6 4z" fill="#fff"/></svg>
+                <h2>유튜브에서 먼저 증명된 <span class="hl">가경T 국민대 강의</span></h2>
+            </div>
+            <p class="yt-buzz-sub">「2026 국민대 약술논술 가이드북 전격 해설」 영상은 <b>조회수 1.2만+</b>를 기록하며 수험생 사이에서 화제가 됐고, 실제 합격생들의 후기가 이어졌습니다.<br><span style="color:#7e8e85;">(유튜브 「김가경 국어 연구소」 · 구독자 2.9만 실제 댓글)</span></p>
+            <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="ic-like" viewBox="0 0 24 24"><path d="M2 21h2V9H2v12zM22 10c0-1.1-.9-2-2-2h-6.3l1-4.6V3c0-.4-.2-.8-.4-1L13 1 7 7c-.4.4-.6.9-.6 1.4V19c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7c.1-.3.2-.5.2-.8v-2z"/></symbol></svg>
+            <div class="yt-marquee">
+                <div class="yt-track">
+                    <div class="yt-cmt"><span class="av">U</span><div class="c-body"><div class="c-top"><span class="c-name">@us****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">이 영상을 매일 보며 가이드북을 분석한 결과 <span class="key">국민대 중어중문학과에 합격했습니다!!</span> 이 해설 강의가 <span class="key">합격을 좌우한 가장 큰 열쇠</span>가 된 것 같아요!</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 2 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt"><span class="av">B</span><div class="c-body"><div class="c-top"><span class="c-name">@Bo****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">선생님 영상 보고 <span class="key">국민대 법학과 붙었습니다.</span> 감사합니다 🙏</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 2 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt"><span class="av">융</span><div class="c-body"><div class="c-top"><span class="c-name">@융맹****</span><span class="c-when">· 6개월 전</span></div><div class="c-text"><span class="key">선생님 덕분에 국민대 논술 잘 보고왔습니다!</span> 정말 큰 도움이 됐어요.</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 5 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt"><span class="av">d</span><div class="c-body"><div class="c-top"><span class="c-name">@db****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">무휴학 3수 준비생입니다! <span class="key">해설 강의를 5번 이상 보면서</span> 답안 작성 루틴을 세워 <span class="key">국민대 논술 잘 보고 왔습니다</span> ㅎㅎ 후회 없이 다 쓰고 왔어요!</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 3 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt"><span class="av">k</span><div class="c-body"><div class="c-top"><span class="c-name">@ko****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">우와… 이걸 유튜브에 올려주시다니 감사합니다! <span class="key">정말 도움 많이 됐어요!!!</span></div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 2 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt"><span class="av">t</span><div class="c-body"><div class="c-top"><span class="c-name">@tv****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">막막했는데 좋은 정보 알려주셔서 감사합니다. <span class="key">포기하려고 했는데 쌤 덕분에 의지가 생겼네요.</span></div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 추천</div></div></div>
+                    <div class="yt-cmt"><span class="av">아</span><div class="c-body"><div class="c-top"><span class="c-name">@아****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">안녕하세요, <span class="key">덕분에 문항분석에 많은 도움이 되고 있습니다</span> :) 매번 잘 보고 있어요!</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 1 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt"><span class="av">잠</span><div class="c-body"><div class="c-top"><span class="c-name">@잠겨****</span><span class="c-when">· 6개월 전</span></div><div class="c-text"><span class="key">감사합니다 선생님</span> 🙇</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 2 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt"><span class="av">쩜</span><div class="c-body"><div class="c-top"><span class="c-name">@쩜****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">선생님 안녕하세요. <span class="key">영상 너무 감사합니다</span> :) 답안 하나하나 다시 보며 공부하고 있어요.</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 1 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt" aria-hidden="true"><span class="av">U</span><div class="c-body"><div class="c-top"><span class="c-name">@us****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">이 영상을 매일 보며 가이드북을 분석한 결과 <span class="key">국민대 중어중문학과에 합격했습니다!!</span> 이 해설 강의가 <span class="key">합격을 좌우한 가장 큰 열쇠</span>가 된 것 같아요!</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 2 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt" aria-hidden="true"><span class="av">B</span><div class="c-body"><div class="c-top"><span class="c-name">@Bo****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">선생님 영상 보고 <span class="key">국민대 법학과 붙었습니다.</span> 감사합니다 🙏</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 2 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt" aria-hidden="true"><span class="av">융</span><div class="c-body"><div class="c-top"><span class="c-name">@융맹****</span><span class="c-when">· 6개월 전</span></div><div class="c-text"><span class="key">선생님 덕분에 국민대 논술 잘 보고왔습니다!</span> 정말 큰 도움이 됐어요.</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 5 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt" aria-hidden="true"><span class="av">d</span><div class="c-body"><div class="c-top"><span class="c-name">@db****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">무휴학 3수 준비생입니다! <span class="key">해설 강의를 5번 이상 보면서</span> 답안 작성 루틴을 세워 <span class="key">국민대 논술 잘 보고 왔습니다</span> ㅎㅎ 후회 없이 다 쓰고 왔어요!</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 3 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt" aria-hidden="true"><span class="av">k</span><div class="c-body"><div class="c-top"><span class="c-name">@ko****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">우와… 이걸 유튜브에 올려주시다니 감사합니다! <span class="key">정말 도움 많이 됐어요!!!</span></div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 2 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt" aria-hidden="true"><span class="av">t</span><div class="c-body"><div class="c-top"><span class="c-name">@tv****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">막막했는데 좋은 정보 알려주셔서 감사합니다. <span class="key">포기하려고 했는데 쌤 덕분에 의지가 생겼네요.</span></div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 추천</div></div></div>
+                    <div class="yt-cmt" aria-hidden="true"><span class="av">아</span><div class="c-body"><div class="c-top"><span class="c-name">@아****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">안녕하세요, <span class="key">덕분에 문항분석에 많은 도움이 되고 있습니다</span> :) 매번 잘 보고 있어요!</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 1 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt" aria-hidden="true"><span class="av">잠</span><div class="c-body"><div class="c-top"><span class="c-name">@잠겨****</span><span class="c-when">· 6개월 전</span></div><div class="c-text"><span class="key">감사합니다 선생님</span> 🙇</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 2 · <span class="heart">♥ 가경T</span></div></div></div>
+                    <div class="yt-cmt" aria-hidden="true"><span class="av">쩜</span><div class="c-body"><div class="c-top"><span class="c-name">@쩜****</span><span class="c-when">· 6개월 전</span></div><div class="c-text">선생님 안녕하세요. <span class="key">영상 너무 감사합니다</span> :) 답안 하나하나 다시 보며 공부하고 있어요.</div><div class="c-likes"><svg class="lk"><use href="#ic-like"/></svg> 1 · <span class="heart">♥ 가경T</span></div></div></div>
+                </div>
+            </div>
+            <a class="yt-buzz-cta" href="https://www.youtube.com/watch?v=kXoH2W24K9w" target="_blank" rel="noopener">
+                <svg class="yt-ico" viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11.2 6l6.6 4-6.6 4z" fill="#fff"/></svg>
+                유튜브에서 강의 보기 →
+            </a>
+        </section>
+
         <div class="lobby-tabs">
             <button id="lobby-tab-0" class="lobby-btn active" onclick="switchLobbyPanel(0)">총괄 비교표 · 요약 가이드</button>
             <button id="lobby-tab-1" class="lobby-btn" onclick="switchLobbyPanel(1)">대학별 상세 탐색</button>
@@ -1075,12 +1143,12 @@
 
         // --- 스크롤 리빌 + 패럴랙스 (카드 생성 후) ---
         window.addEventListener('load', function(){
-            var els = gsap.utils.toArray(['.lobby-tabs','.uni-card','#lobby-panel-0 .sec-h','#lobby-panel-0 .section-title','footer'].join(','));
-            els.forEach(function(el){ gsap.set(el, {opacity:0, y:26}); });
-            ScrollTrigger.batch(els, {
-                start: 'top 88%',
-                once: true,
-                onEnter: function(b){ gsap.to(b, {opacity:1, y:0, duration:.6, ease:'power2.out', stagger:.07}); }
+            var els = gsap.utils.toArray(['.yt-buzz-head','.yt-marquee','.yt-buzz-cta','.lobby-tabs','.uni-card','#lobby-panel-0 .sec-h','#lobby-panel-0 .section-title','footer'].join(','));
+            els.forEach(function(el){
+                gsap.from(el, {
+                    opacity:0, y:26, duration:.6, ease:'power2.out', immediateRender:false,
+                    scrollTrigger:{ trigger:el, start:'top 92%', once:true }
+                });
             });
 
             var glow = document.querySelector('.glow-left');
