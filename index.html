@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>(function(){try{var m=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(!m)document.documentElement.classList.add('anim');}catch(e){}})();</script>
     <title>2027 약술형 논술 합격 마스터 허브 | [오름] 국어 학원 (군포·산본)</title>
     <meta name="description" content="2027학년도 전국 15개 약술형 논술 실시 대학(가천·국민·삼육·상명·서경·수원 등) 전형·수능최저·영역별 문항·고사일정을 한눈에. 군포 산본 [오름] 국어 학원 김가경 원장 직강, 국민대 국어 13건 적중.">
     <meta name="keywords" content="약술형 논술, 약술형 논술 학원, 오름 국어 학원, 오름국어, 군포 국어학원, 산본 국어학원, 약술 논술 대학, 가천대 약술, 국민대 약술, 약술형 논술 정규반, 김가경 국어, 수능 국어, 대입 논술">
@@ -80,6 +81,8 @@
         .hero .stats .kakao-cta .kc-txt { display:flex; flex-direction:column; gap:2px; }
         .hero .stats .kakao-cta .kc-txt b { font-size:16px; font-weight:800; color:#f3f8f5; letter-spacing:-.3px; }
         .hero .stats .kakao-cta .kc-txt > span { font-size:11.5px; font-weight:700; color:var(--mint); }
+        /* 등장 애니메이션 초기 상태 — .anim은 모션 허용 시에만 부여(JS/GSAP 미동작 시 콘텐츠 항상 노출) */
+        .anim .hero-left .brand, .anim .hero-left .badge, .anim .hero-left h1, .anim .hero-left .stats, .anim .hero-left .class-info, .anim .hero-left .grad-trigger, .anim .hero-spot .hit-spot { opacity:0; }
         .class-info { margin-top:26px; display:flex; width:100%; align-items:center; gap:20px; background:rgba(52,211,153,.08); border:1px solid var(--line2); border-left:4px solid var(--green); border-radius:16px; padding:22px 28px; box-shadow:0 0 36px rgba(52,211,153,.15); }
         .class-info .ci-tag { font-size:13px; font-weight:800; color:var(--green-deep); background:linear-gradient(120deg,#6ee7a8,#34d399); padding:9px 16px; border-radius:999px; white-space:nowrap; box-shadow:0 0 18px rgba(52,211,153,.4); }
         .class-info .ci-body { display:flex; flex-direction:column; gap:5px; }
@@ -1039,5 +1042,63 @@
         <a href="sms:010-2452-7452" class="fkakao"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H8l-4 4V6c0-1.1.9-2 2-2z"/></svg>문자 상담 · 010-2452-7452</a>
         <a href="http://pf.kakao.com/_ksxaCn/chat" target="_blank" rel="noopener" class="fkakao fkko"><img src="images/kakao-logo.svg" alt="카카오톡">카카오톡 상담</a>
     </footer>
+
+    <!-- ===== 애니메이션 (GSAP + ScrollTrigger) ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+    (function(){
+        var root = document.documentElement;
+        // GSAP 미로드 또는 모션 비허용 → 숨김 해제 후 종료 (콘텐츠 항상 노출)
+        if (!window.gsap) { root.classList.remove('anim'); return; }
+        if (!root.classList.contains('anim')) return;
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- 히어로 등장 (DOM 준비됨: 스크립트가 body 끝) ---
+        var heroEls = ['.hero-left .brand','.hero-left .badge','.hero-left h1','.hero-left .stats','.hero-left .class-info','.hero-left .grad-trigger']
+            .map(function(s){ return document.querySelector(s); }).filter(Boolean);
+        gsap.to(heroEls, {opacity:1, y:0, duration:.7, ease:'power3.out', stagger:.09, startAt:{y:24}});
+
+        var spots = gsap.utils.toArray('.hero-spot .hit-spot');
+        gsap.to(spots, {opacity:1, y:0, duration:.7, ease:'power3.out', stagger:.12, delay:.3, startAt:{y:30}});
+
+        // --- 스탯 숫자 카운트업 (연도 제외) ---
+        gsap.utils.toArray('.hero .stats .s b').forEach(function(el){
+            var m = el.textContent.trim().match(/^(\d+)(.*)$/);
+            if (!m) return;
+            var target = +m[1], suf = m[2];
+            if (target >= 1900 && target <= 2100) return;   // 2027 같은 연도는 카운트 제외
+            var o = {v:0};
+            el.textContent = '0' + suf;
+            gsap.to(o, {v:target, duration:1.1, ease:'power1.out', delay:.45, onUpdate:function(){ el.textContent = Math.round(o.v) + suf; }});
+        });
+
+        // --- 스크롤 리빌 + 패럴랙스 (카드 생성 후) ---
+        window.addEventListener('load', function(){
+            var els = gsap.utils.toArray(['.lobby-tabs','.uni-card','#lobby-panel-0 .sec-h','#lobby-panel-0 .section-title','footer'].join(','));
+            els.forEach(function(el){ gsap.set(el, {opacity:0, y:26}); });
+            ScrollTrigger.batch(els, {
+                start: 'top 88%',
+                once: true,
+                onEnter: function(b){ gsap.to(b, {opacity:1, y:0, duration:.6, ease:'power2.out', stagger:.07}); }
+            });
+
+            var glow = document.querySelector('.glow-left');
+            if (glow) gsap.to(glow, {yPercent:15, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}});
+
+            // 탭 전환 시 위치 재계산
+            if (typeof window.switchLobbyPanel === 'function') {
+                var orig = window.switchLobbyPanel;
+                window.switchLobbyPanel = function(){ var r = orig.apply(this, arguments); ScrollTrigger.refresh(); return r; };
+            }
+            ScrollTrigger.refresh();
+
+            // 안전장치: 4초 후에도 숨겨진 요소가 있으면 강제 노출
+            setTimeout(function(){
+                els.forEach(function(el){ if (getComputedStyle(el).opacity === '0') gsap.to(el, {opacity:1, y:0, duration:.4}); });
+            }, 4000);
+        });
+    })();
+    </script>
 </body>
 </html>
