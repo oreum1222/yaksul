@@ -612,7 +612,41 @@
         </div>
     </div>
 
-    <header class="hero">
+    <style>
+      .topnav{position:sticky;top:0;z-index:900;background:rgba(10,15,12,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+      .tn-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:0 22px;height:60px;}
+      .tn-brand{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0;}
+      .tn-brand img{width:30px;height:30px;filter:drop-shadow(0 0 10px rgba(52,211,153,.3));}
+      .tn-word{font-size:16px;font-weight:800;color:var(--ink);letter-spacing:-.3px;white-space:nowrap;}
+      .tn-word i{font-style:normal;color:var(--mint);}
+      .tn-tabs{display:flex;align-items:center;gap:2px;flex:1;overflow-x:auto;scrollbar-width:none;}
+      .tn-tabs::-webkit-scrollbar{display:none;}
+      .tn-tab{background:none;border:none;color:var(--ink2);font-size:14.5px;font-weight:700;cursor:pointer;padding:9px 14px;border-radius:9px;white-space:nowrap;transition:.15s;position:relative;font-family:inherit;}
+      .tn-tab:hover{color:var(--mint);background:rgba(52,211,153,.06);}
+      .tn-tab.active{color:var(--mint);}
+      .tn-tab.active::after{content:'';position:absolute;left:14px;right:14px;bottom:-1px;height:2px;background:linear-gradient(90deg,#6ee7a8,#34d399);border-radius:2px;box-shadow:0 0 10px rgba(52,211,153,.6);}
+      .tn-cta{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;background:linear-gradient(120deg,#6ee7a8,#34d399);color:var(--green-deep);font-weight:800;font-size:13.5px;text-decoration:none;padding:8px 15px;border-radius:9px;box-shadow:0 0 20px rgba(52,211,153,.28);}
+      .tn-cta img{width:16px;height:16px;}
+      @media(max-width:680px){.tn-inner{gap:9px;padding:0 12px;height:54px;}.tn-word{display:none;}.tn-tab{padding:7px 11px;font-size:13.5px;}.tn-cta{font-size:0;gap:0;padding:8px 10px;}.tn-cta img{width:18px;height:18px;}}
+    </style>
+    <nav class="topnav">
+      <div class="tn-inner">
+        <a class="tn-brand" href="#" onclick="goHome();return false;">
+          <img src="images/oreum-emblem.png" alt="[오름] 국어 학원">
+          <span class="tn-word">[<i>오름</i>] 국어 학원</span>
+        </a>
+        <div class="tn-tabs">
+          <button id="nav-home" class="tn-tab active" onclick="goHome()">홈</button>
+          <button id="nav-0" class="tn-tab" onclick="switchLobbyPanel(0)">대학 비교</button>
+          <button id="nav-1" class="tn-tab" onclick="switchLobbyPanel(1)">대학별 상세</button>
+          <button id="nav-2" class="tn-tab" onclick="switchLobbyPanel(2)">[오름] 콘텐츠</button>
+        </div>
+        <a class="tn-cta" href="http://pf.kakao.com/_ksxaCn/chat" target="_blank" rel="noopener">
+          <img src="images/kakao-logo.svg" alt="카카오톡"><span>상담</span>
+        </a>
+      </div>
+    </nav>
+    <header class="hero home-only">
         <div class="glow-left"></div>
         <div class="hero-inner">
             <div class="hero-left">
@@ -668,8 +702,50 @@
 
     <div class="container">
 
+        <style>
+          .home-nav{margin:38px 0 10px;}
+          .hn-lead{margin-bottom:20px;}
+          .hn-lead h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin-bottom:7px;line-height:1.3;}
+          .hn-lead p{font-size:14.5px;color:var(--ink2);line-height:1.6;}
+          .home-nav-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+          .home-nav-card{text-align:left;display:flex;flex-direction:column;gap:10px;background:var(--surface2);border:1px solid var(--line);border-radius:18px;padding:24px 22px;cursor:pointer;transition:.18s;font-family:inherit;}
+          .home-nav-card:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.4),0 0 40px rgba(52,211,153,.12);}
+          .hn-num{font-size:13px;font-weight:800;color:var(--green-deep);background:linear-gradient(120deg,#6ee7a8,#34d399);width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 18px rgba(52,211,153,.35);}
+          .hn-t{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-.3px;}
+          .hn-d{font-size:13.5px;color:var(--ink2);line-height:1.6;flex:1;}
+          .hn-go{font-size:13.5px;font-weight:800;color:var(--mint);margin-top:2px;}
+          @media(max-width:760px){.home-nav-grid{grid-template-columns:1fr;}.hn-lead h2{font-size:20px;}}
+        </style>
+        <!-- 홈 둘러보기 네비게이터 -->
+        <section class="home-nav home-only">
+            <div class="hn-lead">
+                <h2>원하는 정보를 골라 바로 확인하세요</h2>
+                <p>전형 비교부터 대학별 심층 분석, [오름] 전용 콘텐츠까지 — 카드를 누르면 해당 화면으로 이동합니다.</p>
+            </div>
+            <div class="home-nav-grid">
+                <button class="home-nav-card" onclick="switchLobbyPanel(0)">
+                    <span class="hn-num">01</span>
+                    <span class="hn-t">대학 비교</span>
+                    <span class="hn-d">2027 전국 11개 약술형 논술 대학의 전형·수능최저·영역별 문항을 한눈에 비교</span>
+                    <span class="hn-go">비교표 보기 →</span>
+                </button>
+                <button class="home-nav-card" onclick="switchLobbyPanel(1)">
+                    <span class="hn-num">02</span>
+                    <span class="hn-t">대학별 상세</span>
+                    <span class="hn-d">대학을 고르면 전형 리포트·모집 규모·수능최저·논술 일정까지 한 번에 열립니다</span>
+                    <span class="hn-go">상세 분석 →</span>
+                </button>
+                <button class="home-nav-card" onclick="switchLobbyPanel(2)">
+                    <span class="hn-num">03</span>
+                    <span class="hn-t">[오름] 콘텐츠</span>
+                    <span class="hn-d">자체 문학·독서 교재 · 씨에스엠 약술 모의고사 · 국민대 국어 13건 적중 자료</span>
+                    <span class="hn-go">콘텐츠 보기 →</span>
+                </button>
+            </div>
+        </section>
+
         <!-- 유튜브 강의 반응 -->
-        <section class="yt-buzz">
+        <section class="yt-buzz home-only">
             <div class="yt-buzz-head">
                 <svg class="yt-ico" viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11.2 6l6.6 4-6.6 4z" fill="#fff"/></svg>
                 <h2>유튜브에서 먼저 증명된 <span class="hl">가경T 국민대 강의</span></h2>
@@ -704,31 +780,27 @@
             </a>
         </section>
 
-        <div class="lobby-tabs">
-            <button id="lobby-tab-0" class="lobby-btn active" onclick="switchLobbyPanel(0)">총괄 비교표 · 요약 가이드</button>
-            <button id="lobby-tab-1" class="lobby-btn" onclick="switchLobbyPanel(1)">대학별 상세 탐색</button>
-            <button id="lobby-tab-2" class="lobby-btn" onclick="switchLobbyPanel(2)">[오름]의 강력한 약술 콘텐츠</button>
+        <!-- 원장 직강 영상 (홈) -->
+        <div class="yt-section home-only">
+            <div class="sec-h">김가경 [오름] 국어 원장 직강 <span class="sub">· 유튜브 바로가기</span></div>
+            <div class="yt-grid">
+                <a class="yt-card" href="https://youtu.be/lo6MII5xzyE" target="_blank" rel="noopener" aria-label="김가경 원장 유튜브 영상 1">
+                    <img src="https://img.youtube.com/vi/lo6MII5xzyE/hqdefault.jpg" alt="김가경 원장 유튜브 영상 1" loading="lazy"><span class="yt-play"><span></span></span>
+                </a>
+                <a class="yt-card" href="https://youtu.be/WHAB9ooLNjE" target="_blank" rel="noopener" aria-label="김가경 원장 유튜브 영상 2">
+                    <img src="https://img.youtube.com/vi/WHAB9ooLNjE/hqdefault.jpg" alt="김가경 원장 유튜브 영상 2" loading="lazy"><span class="yt-play"><span></span></span>
+                </a>
+                <a class="yt-card" href="https://youtu.be/kXoH2W24K9w" target="_blank" rel="noopener" aria-label="김가경 원장 유튜브 영상 3">
+                    <img src="https://img.youtube.com/vi/kXoH2W24K9w/hqdefault.jpg" alt="김가경 원장 유튜브 영상 3" loading="lazy"><span class="yt-play"><span></span></span>
+                </a>
+                <a class="yt-card" href="https://youtu.be/y9ySVwrUW_Y" target="_blank" rel="noopener" aria-label="김가경 원장 유튜브 영상 4">
+                    <img src="https://img.youtube.com/vi/y9ySVwrUW_Y/hqdefault.jpg" alt="김가경 원장 유튜브 영상 4" loading="lazy"><span class="yt-play"><span></span></span>
+                </a>
+            </div>
         </div>
 
-        <!-- 1번 탭 -->
-        <div id="lobby-panel-0" class="lobby-panel active">
-            <div class="yt-section">
-                <div class="sec-h">김가경 [오름] 국어 원장 직강 <span class="sub">· 유튜브 바로가기</span></div>
-                <div class="yt-grid">
-                    <a class="yt-card" href="https://youtu.be/lo6MII5xzyE" target="_blank" rel="noopener" aria-label="김가경 원장 유튜브 영상 1">
-                        <img src="https://img.youtube.com/vi/lo6MII5xzyE/hqdefault.jpg" alt="김가경 원장 유튜브 영상 1" loading="lazy"><span class="yt-play"><span></span></span>
-                    </a>
-                    <a class="yt-card" href="https://youtu.be/WHAB9ooLNjE" target="_blank" rel="noopener" aria-label="김가경 원장 유튜브 영상 2">
-                        <img src="https://img.youtube.com/vi/WHAB9ooLNjE/hqdefault.jpg" alt="김가경 원장 유튜브 영상 2" loading="lazy"><span class="yt-play"><span></span></span>
-                    </a>
-                    <a class="yt-card" href="https://youtu.be/kXoH2W24K9w" target="_blank" rel="noopener" aria-label="김가경 원장 유튜브 영상 3">
-                        <img src="https://img.youtube.com/vi/kXoH2W24K9w/hqdefault.jpg" alt="김가경 원장 유튜브 영상 3" loading="lazy"><span class="yt-play"><span></span></span>
-                    </a>
-                    <a class="yt-card" href="https://youtu.be/y9ySVwrUW_Y" target="_blank" rel="noopener" aria-label="김가경 원장 유튜브 영상 4">
-                        <img src="https://img.youtube.com/vi/y9ySVwrUW_Y/hqdefault.jpg" alt="김가경 원장 유튜브 영상 4" loading="lazy"><span class="yt-play"><span></span></span>
-                    </a>
-                </div>
-            </div>
+        <!-- 1번 탭: 대학 비교 -->
+        <div id="lobby-panel-0" class="lobby-panel">
 
             <div class="toggle-wrapper">
                 <button class="btn-toggle" onclick="toggleGuideCards()">
@@ -865,11 +937,19 @@
             else { content.style.display = 'block'; arrow.textContent = '▲'; }
         }
 
-        function switchLobbyPanel(panelIdx) {
+        function setNavActive(id){ document.querySelectorAll('.tn-tab').forEach(t => t.classList.remove('active')); var el = document.getElementById(id); if(el) el.classList.add('active'); }
+        function goHome(){
+            document.querySelectorAll('.home-only').forEach(e => e.style.display = '');
             document.querySelectorAll('.lobby-panel').forEach(p => p.classList.remove('active'));
-            document.querySelectorAll('.lobby-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById(`lobby-panel-${panelIdx}`).classList.add('active');
-            document.getElementById(`lobby-tab-${panelIdx}`).classList.add('active');
+            setNavActive('nav-home');
+            window.scrollTo({top:0, behavior:'smooth'});
+        }
+        function switchLobbyPanel(panelIdx) {
+            document.querySelectorAll('.home-only').forEach(e => e.style.display = 'none');
+            document.querySelectorAll('.lobby-panel').forEach(p => p.classList.remove('active'));
+            var p = document.getElementById('lobby-panel-' + panelIdx); if(p) p.classList.add('active');
+            setNavActive('nav-' + panelIdx);
+            window.scrollTo({top:0, behavior:'smooth'});
         }
 
         const univData = [
@@ -1119,6 +1199,7 @@
                 if (idx >= 0) switchTab(idx);
             } else if (h === '#explorer') { switchLobbyPanel(1); }
             else if (h === '#books') { switchLobbyPanel(2); }
+            else { goHome(); }
 
             // 적중 자랑은 히어로 스포트라이트 카드로 상시 노출 (자동 모달 없음)
         };
