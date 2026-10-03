@@ -1330,5 +1330,49 @@
         });
     })();
     </script>
+
+    <!-- ===== DE-SLOP LAYER: AI 네온 글로우/그라데이션 티 제거, 초록을 절제된 단일 악센트로 ===== -->
+    <style>
+      :root{ --green:#38a97e; --mint:#63c7a0; }
+      ::selection{ background:rgba(99,199,160,.28); color:#fff; }
+
+      /* 1) 라디알 글로우 블롭 제거 */
+      .hero::before, .hero::after, .hero .glow-left,
+      .promo-hero::before, .detail-display::before, .hit-modal-hero::before { display:none !important; }
+
+      /* 2) 로고 네온 드롭섀도 제거 */
+      .brand img, .tn-brand img { filter:none !important; }
+
+      /* 3) 네온 box-shadow 전면 제거 */
+      .hero .badge, .hero .stats .s, .hero .stats .kakao-cta, .hero .stats .kakao-cta:hover,
+      .yt-buzz-cta, .yt-buzz-cta:hover, .class-info, .ci-tag, .spot-badge,
+      .spot-btn, .spot-btn:hover, .lobby-btn.active, .sec-h::before, .card-tip .ic,
+      .uni-card, .uni-card::before, .uni-card:hover::before, .uc-detail:hover, .uni-pill.active,
+      .dt-cta, .dt-cta:hover, .flow-num, footer .fkakao, footer .fkakao:hover, .credit-badge,
+      .hit-btn, .hit-btn:hover, .hit-modal-hero .tagx, .cmp-card.hit, .hit-toggle:hover,
+      .tn-tab.active::after, .tn-cta, .hn-num, .yt-card, .pair-lbl.hit, .hit-final, .credit-badge { box-shadow:none !important; }
+
+      /* 카드류 호버: 네온 대신 중립 그림자 */
+      .uni-card:hover, .card-tip:hover, .yt-card:hover, .home-nav-card:hover,
+      .hit-spot, .hit-modal, .pair-panel, .hit-reopen, .hit-reopen:hover { box-shadow:0 16px 38px rgba(0,0,0,.46) !important; }
+
+      /* 4) 그라데이션 글자 → 단색 */
+      .hero h1 .hl, .hero .stats .s b, .hit-spot-txt h3 b, .promo-hero h2 .hl,
+      .hit-modal-hero h3 .hl, .hit-stat b {
+        background:none !important; -webkit-text-fill-color:var(--mint) !important;
+        color:var(--mint) !important; filter:none !important;
+      }
+
+      /* 5) 그라데이션 채움(버튼·필·칩) → 단색 플랫 */
+      .tn-cta, .ci-tag, .grad-uni h4 .cnt, .spot-btn, .lobby-btn.active, .uni-pill.active,
+      .dt-cta, .flow-num, .credit-badge, .hit-btn, .cmp-card.hit .cmp-label, .hit-final,
+      .pair-lbl.hit, .hit-reopen, .hn-num, .uc-detail:hover {
+        background:#2f9e73 !important; color:#05201a !important;
+      }
+      .sec-h::before, .uni-card::before { background:#2f9e73 !important; }
+
+      /* 6) 펄스 애니메이션 제거 */
+      .spot-btn { animation:none !important; }
+    </style>
 </body>
 </html>
