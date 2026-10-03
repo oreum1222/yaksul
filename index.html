@@ -646,6 +646,63 @@
         </a>
       </div>
     </nav>
+
+    <!-- ===== 시네마틱 히어로 (책→꽃) ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+      .vhero{position:relative;width:100%;height:calc(100svh - 60px);min-height:520px;background:#000;overflow:hidden;display:flex;font-family:'Noto Serif KR',serif;}
+      .vh-text{flex:1 1 52%;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(28px,5.5vw,88px);z-index:10;}
+      .vh-bloom{flex:1 1 48%;position:relative;}
+      .vh-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;background:#000;}
+      .vh-bloom::before{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.15) 22%,transparent 46%);}
+      .vh-rule{width:40px;height:1px;background:#c6b6ec;opacity:.85;margin-bottom:24px;transform-origin:left;transform:scaleX(0);transition:transform .9s ease;}
+      .vh-kick{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(15px,1.6vw,19px);letter-spacing:1.5px;color:#9b937f;opacity:0;transform:translateY(14px);transition:opacity 1.2s ease,transform 1.2s ease;}
+      .vh-title{margin-top:16px;font-weight:500;font-size:clamp(24px,3.3vw,42px);line-height:1.5;letter-spacing:-.5px;color:#ece6d8;opacity:0;transform:translateY(14px);transition:opacity 1.3s ease,transform 1.3s ease;}
+      .vh-title em{font-style:normal;color:#c6b6ec;font-weight:700;}
+      .vh-sub{margin-top:18px;font-size:clamp(13px,1.3vw,15.5px);font-weight:300;color:#9b937f;letter-spacing:.3px;opacity:0;transform:translateY(14px);transition:opacity 1.2s ease,transform 1.2s ease;}
+      .vh-cta{margin-top:32px;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;font-family:inherit;font-size:14.5px;font-weight:500;letter-spacing:.4px;color:#ece6d8;cursor:pointer;padding:14px 32px;border:1px solid rgba(236,230,216,.4);border-radius:999px;background:transparent;transition:.35s ease;}
+      .vh-cta:hover{background:rgba(236,230,216,.1);border-color:rgba(236,230,216,.65);}
+      .vh-ar{transition:transform .35s ease;} .vh-cta:hover .vh-ar{transform:translateX(4px);}
+      .vhero.revealed .vh-rule{transform:scaleX(1);}
+      .vhero.revealed .vh-kick{opacity:1;transform:none;transition-delay:.1s;}
+      .vhero.revealed .vh-title{opacity:1;transform:none;transition-delay:.35s;}
+      .vhero.revealed .vh-sub{opacity:1;transform:none;transition-delay:.85s;}
+      .vhero.revealed .vh-cta{opacity:1;transform:none;transition-delay:1.15s;}
+      @media(max-width:820px){
+        .vhero{display:block;height:calc(100svh - 54px);}
+        .vh-bloom{position:absolute;inset:0;z-index:1;}
+        .vh-vid{object-fit:cover;}
+        .vh-bloom::before{background:linear-gradient(to top,#000 6%,rgba(0,0,0,.72) 34%,transparent 62%);}
+        .vh-text{position:absolute;left:0;right:0;bottom:7vh;z-index:10;align-items:center;text-align:center;padding:0 24px;}
+        .vh-rule{margin:0 auto 20px;} .vh-cta{align-self:center;} .vh-title{font-size:25px;line-height:1.5;}
+      }
+      @media(prefers-reduced-motion:reduce){.vh-kick,.vh-title,.vh-sub,.vh-cta{opacity:1;transform:none;}.vh-rule{transform:scaleX(1);}}
+    </style>
+    <section class="vhero home-only">
+      <div class="vh-text">
+        <div class="vh-rule"></div>
+        <div class="vh-kick">가능성을 피우다 — [오름] 약술형 논술</div>
+        <div class="vh-title">지나간 성적은 바꿀 수 없어도,<br><em>가능성</em>은 아직 끝나지 않았다.</div>
+        <div class="vh-sub">약술 국어, [오름]이 마지막 한 수까지 함께합니다.</div>
+        <button class="vh-cta" onclick="switchLobbyPanel(0)">약술형 논술 둘러보기 <span class="vh-ar">→</span></button>
+      </div>
+      <div class="vh-bloom">
+        <video class="vh-vid" id="vh-seq" src="sequence.mp4" autoplay muted playsinline preload="auto"></video>
+      </div>
+    </section>
+    <script>
+      (function(){
+        var v=document.getElementById('vh-seq'); if(!v) return;
+        function reveal(){ var h=document.querySelector('.vhero'); if(h) h.classList.add('revealed'); }
+        v.addEventListener('timeupdate',function(){ if(v.currentTime>=4.5) reveal(); });
+        v.addEventListener('ended',reveal);
+        function startVid(){ try{ v.currentTime=0; var p=v.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+        if(document.readyState!=='loading') startVid(); else window.addEventListener('load',startVid);
+      })();
+    </script>
+
     <header class="hero home-only">
         <div class="glow-left"></div>
         <div class="hero-inner">
