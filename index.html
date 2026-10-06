@@ -51,7 +51,8 @@
             --ink:#f1f6f3; --ink2:#a7b6ad; --muted:#76867c;
             --green:#34d399; --mint:#6ee7a8; --green-deep:#06281a; --soft:#13241b; --amber:#fbcf5b;
         }
-        * { margin:0; padding:0; box-sizing:border-box; font-family:'Pretendard',sans-serif; word-break:keep-all; overflow-wrap:break-word; }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Pretendard',sans-serif; word-break:keep-all; overflow-wrap:break-word; text-wrap:pretty; }
+        h1,h2,h3,h4,.vh-title{ text-wrap:balance; }
         body { background:var(--bg); color:var(--ink2); line-height:1.6; padding-bottom:0; }
         ::selection { background:rgba(52,211,153,.3); color:#fff; }
 
@@ -746,7 +747,7 @@
                     <span class="ci-tag">수업 안내</span>
                     <div class="ci-body">
                         <b>[오름] 국어 약술형 정규반</b>
-                        <span>일요일 13:00–16:00 · 주 1회 3시간</span>
+                        <span><span style="white-space:nowrap">일요일 13:00–16:00</span> · <span style="white-space:nowrap">주 1회 3시간</span></span>
                     </div>
                 </div>
                 <button class="grad-trigger" onclick="openGrad()">
